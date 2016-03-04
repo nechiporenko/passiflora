@@ -1,0 +1,53 @@
+﻿@import "../modules/_base.scss";
+/*Bootstrap Modify*/
+@include media($extra-large){
+    .container{
+        width:1200px;
+    }
+}
+
+
+.dropdown-menu{
+    border-radius:$border-radius;
+    padding-top:15px;
+    box-shadow:0 4px 0 rgba($primary, .6);
+    border:1px solid $border-color;
+
+    &:before,
+    &:after{
+        content:'';
+        display:block;
+        position:absolute;
+        left:15px;
+    }
+
+    &:before{
+        @include triangle(22px, $border-color, up);
+        top:-11px;
+    }
+
+    &:after{
+        @include triangle(22px, #fff, up);
+        top:-9px;
+    }
+
+    & > li >a{
+        color:$primary-text-color;
+        font-weight:600;
+
+        &:hover,
+        &:active,
+        &:focus{
+            color:$primary-text-color;
+            background:#fff7f9;
+            text-decoration:underline;
+        }
+    }
+}
+.dropdown-menu-right{
+    &:before,
+    &:after{
+        left:auto;
+        right:15px;
+    }
+}

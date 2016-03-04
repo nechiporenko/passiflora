@@ -1,0 +1,20 @@
+﻿@import "../../modules/_base.scss";
+/*Header Desktop Menu Container*/
+.b-header__menu{
+    padding:0 1px;
+    margin:53px 0 0;
+    background-color:#fff;
+    border-top:1px solid #eee;
+    border-bottom:5px solid rgba($primary, .7);
+    display:none;
+
+    @include media($desktop){
+        display:block;
+    }
+
+    @include media($extra-large){
+        background-color:none;
+        border:none;
+        background:url(../img/menu.png) 0 0 no-repeat;
+    }
+}

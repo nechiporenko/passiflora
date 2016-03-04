@@ -1,0 +1,16 @@
+﻿@import "../../modules/_base.scss";
+/*Page Titles*/
+.page__title{
+    display:block;
+    width:210px;
+    height:81px;
+    line-height:80px;
+    margin:0 auto 25px;
+    white-space:nowrap;
+    color:#fff;
+    background:url(../img/sprite.png) 0 -150px no-repeat;
+    @include font-size(24px);
+    font-weight:600;
+    text-transform:uppercase;
+    text-align:center;
+}

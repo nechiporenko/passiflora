@@ -1,0 +1,80 @@
+﻿@import "../../modules/_base.scss";
+/*Header Main Section*/
+.b-header__main{
+    width:100%;
+    height:58px;
+    background:#fff;
+    box-shadow:0 1px 2px rgba(#eee, .8);
+    position:relative;
+    z-index:499;//чтобы не перекрывалась тень предыдущего слоя
+
+    @include media($desktop){
+        position:fixed;
+        top:36px;
+        left:0;
+    }
+}
+
+.h-info{
+    float:left;
+    height:56px;
+    padding:10px 10px 10px 30px;
+    @include font-size(14px);
+    font-weight:600;
+    line-height:1.28;
+    position:relative;
+    overflow:hidden;
+    display:none;
+
+    &:before{
+        content:'';
+        display:block;
+        width:30px;
+        height:30px;
+        position:absolute;
+        left:0;
+        top:50%;
+        margin-top:-15px;
+        background-image:url(../img/sprite.png);
+        background-repeat:no-repeat;
+    }
+
+    @include media($tablet){
+        display:block;
+    }
+}
+
+.h-info--call{
+    margin-right:15px;
+    &:before{
+        background-position:0 -30px;
+    }
+
+    @include media($large){
+        margin-right:50px;
+    }
+}
+
+
+.h-info--addr{
+    display:none;
+
+    &:before{
+        background-position:0 -60px;
+    }
+
+    @include media($desktop){
+        display:block;
+    }
+}
+
+.h-info__tel{
+    display:block;
+    color:$text-color;
+    &:hover,
+    &:active,
+    &:focus{
+        color:$primary;
+        text-decoration:none;
+    }
+}

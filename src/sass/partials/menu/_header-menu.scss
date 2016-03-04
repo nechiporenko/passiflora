@@ -1,0 +1,42 @@
+﻿@import "../../modules/_base.scss";
+/*Top Header Menu*/
+.h-menu{
+    float:left;
+    @extend .g-clearlist;
+    font-size:0;
+    display:none;
+
+    @include media($desktop){
+        display:block;
+    }
+}
+.h-menu__item{
+    display:inline-block;
+    margin-left:15px;
+    @include font-size(14px);
+
+    @include media($large){
+        margin-left:35px;
+    }
+
+    &:first-child{
+        margin-left:0;
+    }
+}
+.h-menu__link{
+    display:block;
+    padding:6px 0;
+    color:#fff;
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:#eee;
+        text-decoration:none;
+    }
+
+    &.current{
+        text-decoration:underline;
+        cursor:default;
+    }
+}

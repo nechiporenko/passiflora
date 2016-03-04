@@ -1,0 +1,154 @@
+﻿@import "../../modules/_base.scss";
+/*Header Homepage Slider*/
+.b-header__slider{
+    background:#ddd;
+    overflow:hidden;
+    position:relative;
+
+    & > svg{
+        position:absolute;
+        top:0; left:0;
+    }
+
+    @include media($desktop){
+        height:330px;
+    }
+}
+.h-slider{
+    @extend .g-clearlist;
+}
+.h-slider__item{}
+
+.h-slider__link{
+    display:block;
+    position:relative;
+    text-decoration:none !important;
+
+    &:after{
+        content:'';
+        display:block;
+        position:absolute;
+        top:0; right:0; bottom:0; left:0;
+        @include linear-gradient(to bottom, lighten(rgba($primary, .1), 10%), rgba($primary, .5));
+        z-index:1;
+    }
+}
+
+.h-slider__sm,
+.h-slider__xl{
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.h-slider__sm{
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:33.28%;
+    }
+
+    @include media($desktop){
+        display:none;
+    }
+}
+
+.h-slider__xl{
+    height:330px;
+    display:none;
+    @include media($desktop){
+        display:block;
+    }
+}
+
+.h-slider__inner{
+    position:absolute;
+    top:0; right:0; bottom:0; left:0;
+}
+
+.h-slider__table{
+    @extend .g-as-table;
+}
+
+.h-slider__cell{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.h-slider__content{
+    padding:0 5.98%;
+    color:#fff;
+    @include font-size(34px);
+    font-family: 'Monotype-Corsiva-Regular', serif;
+    @include font-size(18px);
+    text-shadow:2px 2px 6px rgba(#000, .5);
+    text-align:center;
+    position:relative;
+    z-index:2;
+
+    strong{
+        font-weight:normal;
+        font-size:180%;
+    }
+
+    @include media($tablet){
+        @include font-size(32px);
+        text-align:left;
+    }
+
+    @include media($desktop){
+        @include font-size(50px);
+    }
+
+}
+
+.h-slider__nav{
+    position:absolute;
+    top:0; left:0;bottom:0;
+    width:100%;
+
+    .container{
+        position:relative;
+        height:100%;
+    }
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+}
+.h-slider__arrow{
+    display:block;
+    height:40px;
+    width:40px;
+    line-height:40px;
+    position:absolute;
+    top:50%;
+    margin-top:-20px;
+    z-index:100;
+    cursor:pointer;
+    @include font-size(40px);
+    color:#fff;
+
+    .bx-prev,
+    .bx-next{
+        color:#fff;
+        outline:0;
+
+        &:hover,
+        &:active{
+            color:$primary-text-color;
+        }
+    }
+}
+
+.h-slider__arrow--prev{
+    left:0;
+    text-align:left;
+}
+.h-slider__arrow--next{
+    right:0;
+    text-align:right;
+}
+

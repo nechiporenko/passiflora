@@ -1,0 +1,138 @@
+@import "base";
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Base Styles */
+html{
+    height:100%;
+}
+
+body{
+    min-height:100%;
+    line-height: 1;
+    font-family: "Open Sans", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    background:#fcfafa url(../img/pattern.png) repeat;
+
+    @include media($desktop){//на десктопе фиксируем хидер
+        padding-top:$header-height;
+    }
+}
+
+.page__content{
+    padding:15px 0;
+    @include font-size($project-font-size);
+    line-height:strip-units($project-line-height/$project-font-size);
+}
+
+/* Typography*/
+h1, h2, h3, h4, h5, h6, .g-title, .g-subtitle{
+  margin-top: 0;
+  @include px2rem(margin-bottom, 1.4*$project-line-height);
+  line-height:1.1;
+  color:$title-color;
+  font-weight:700;
+}
+.g-title{
+    display:block;
+    @include font-size(2*$project-font-size);
+}
+
+.g-subtitle{
+    display:block;
+    @include font-size(1.5*$project-font-size);
+}
+
+.g-brand-color{
+    color:$primary;
+}
+
+b, strong{
+    font-weight:700;
+}
+
+
+
+
+/* Lists */
+.g-clearlist{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+
+/* Spacing */
+p {
+  margin-top: 0; }
+
+
+pre,
+blockquote,
+dl,
+figure,
+fieldset,
+p,
+ul,
+ol{
+    @include px2rem(margin-bottom, $project-line-height);
+}
+
+/* Misc */
+hr {
+    @include px2rem(margin, $project-line-height 0);
+    border-width: 0;
+    border-top: 1px solid $border-color;
+}
+
+/* Transitions */
+a, button, input[type="button"], input[type="submit"],
+#{$all-text-inputs}, select{
+    @include transition-property(border-color,color,background-color);
+    @include transition-duration(.15s);
+    @include transition-timing-function(ease-in);
+}
+
+
+/*Helper classes*/
+.g-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.g-visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.g-invisible {
+    visibility: hidden;
+}
+
+.g-clearfix{
+    @include clearfix; //bourbon clearfix
+}
+.lt-ie9{
+    .g-clearfix{
+        @include clear-fix();
+    }
+}

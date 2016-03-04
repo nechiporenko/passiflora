@@ -1,0 +1,63 @@
+﻿@import "base";
+/* Buttons */
+.g-btn{
+    display:inline-block;
+    vertical-align:middle;
+    @include px2rem(margin-bottom, $project-line-height);
+    @include px2rem(height, 36px);
+    @include px2rem(line-height, 35px);
+    @include px2rem(padding, 0 28px);
+    color:#fff;
+    text-align: center;
+    text-shadow:1px 1px 2px rgba(#000, .3);
+    box-shadow:0 1px 2px rgba(#000, .3);
+    @include font-size(13px);
+    @include px2rem(letter-spacing, -.2px);
+    font-weight:800;
+    text-decoration: none;
+    text-transform:uppercase;
+    white-space: nowrap;
+    background-color: $primary-alt;
+    border-radius:$border-radius;
+    border: 1px solid $primary-alt;
+    cursor: pointer;
+    @include transition(transform .15s ease);
+
+    &:hover,
+    &:focus,
+    &:active{
+        color:#fff;
+        text-decoration:none;
+        background:$primary-alt-light;
+        border-color:$primary-alt-light;
+        outline:0;
+    }
+
+    &:active{
+        @include transform(translateY(2px));
+    }
+
+
+    &:disabled,
+    &.disabled{
+        color:$primary-alt;
+        background:#fff;
+        border-color:$primary-alt;
+        text-shadow:none;
+        box-shadow:none;
+    }
+}
+
+.g-clearbtn{
+    display:inline-block;
+    vertical-align:middle;
+    padding:0;
+    border:none;
+    background:none;
+
+    &:hover,
+    &:active,
+    &:focus{
+        outline:0;
+    }
+}

@@ -1,0 +1,31 @@
+﻿@import "../../modules/_base.scss";
+/*Product Rating*/
+.b-rating{
+    display:inline-block;
+    width:116px;
+    height:16px;
+    vertical-align:middle;
+    background:#fff url(../img/sprite.png) no-repeat;
+}
+.b-rating--5{
+    background-position:4px -240px;
+}
+
+.b-rating--4{
+    background-position:4px -260px;
+}
+.b-rating--3{
+    background-position:4px -280px;
+}
+
+.b-rating--2{
+    background-position:4px -300px;
+}
+
+.b-rating--1{
+    background-position:4px -320px;
+}
+
+.b-rating__inner{
+    display:none;
+}

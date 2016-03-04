@@ -1,0 +1,135 @@
+﻿@import "../../modules/_base.scss";
+/*Header Search Form*/
+.h-search{
+    float:left;
+    height:58px;
+    padding-top:13px;
+    width:200px;
+    position:relative;
+
+   @include media($mobile){
+       width:332px;
+   }
+
+   @include media($tablet){
+       float:right;
+   }
+
+   @include media($large){
+       margin-right:20px;
+       width:356px; //по размеру блока с соц.линками
+   }
+}
+
+.h-search__form{
+    position:relative;
+    z-index:1001;//чтобы перекрыть результаты поиска
+}
+
+.h-search__input{
+    display:inline-block;
+    vertical-align:middle;
+    height:30px;
+    line-height:30px;
+    padding:0 40px 0 10px;
+    width:100%;
+    border: 1px solid $border-color;
+    border-radius:15px;
+    color:$text-color;
+
+    @include placeholder{
+        color:$border-color;
+        text-overflow:ellipsis;
+    }
+
+    &:hover,
+    &:active,
+    &:focus{
+        border-color:$primary;
+        outline:0;
+    }
+}
+.h-search__btn{
+    @extend .g-clearbtn;
+    width:30px;
+    height:28px;
+    @include font-size(16px);
+    color:$border-color;
+    position:absolute;
+    top:1px; right:8px;
+
+    &:hover,
+    &:focus{
+        color:$primary;
+    }
+}
+
+/*Header search dropdown*/
+.h-search-list{
+    @extend .g-clearlist;
+    width:100%;
+    padding:30px 0 15px;
+    border-radius:0 0 $border-radius $border-radius;
+    border:1px solid $border-color;
+    box-shadow:0 4px 0 rgba($primary, .6);
+    background:#fff;
+    position:absolute;
+    top:50%; left:0;
+    z-index:1000;
+    display:none;
+}
+
+
+.h-search-list__table{
+    @extend .h-cart__products;
+    td{
+        padding:14px 5px;
+    }
+}
+.h-search-list__thumb{
+    @extend .h-cart__thumb;
+    width:15px;
+    height:15px;
+}
+.h-search-list__img{
+    @extend .g-img-centered;
+}
+.h-search-list__link{
+    @extend .h-cart__link;
+    @include font-size(11px);
+}
+.h-search-list__price{
+    @extend .h-cart__price;
+    @include font-size(12px);
+}
+.h-search-list__more{
+    margin-left:10px;
+    color:$text-color;
+    @include font-size(12px);
+    font-weight:600;
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:$primary-text-color;
+    }
+}
+
+@include media($mobile){
+    .h-search-list__table{
+        td{
+            padding:14px 10px;
+        }
+    }
+    .h-search-list__thumb{
+        width:50px;
+        height:50px;
+    }
+
+    .h-search-list__link{
+        @include font-size(13px);
+    }
+    .h-search-list__price{
+        @include font-size(14px);
+    }
+}

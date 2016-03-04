@@ -1,0 +1,131 @@
+﻿@import "../../modules/_base.scss";
+/*Header Cart*/
+.h-cart{
+    float:right;
+    height:58px;
+    padding-top:10px;
+    width:46px;
+    text-align:center;
+    background:#fff;
+    position:relative;
+
+    &.open{
+        background:$primary;
+        .h-cart__btn{
+            background-position:-30px -90px;
+        }
+        .h-cart__count{
+            background:#71696c;
+        }
+    }
+}
+.h-cart__btn{
+    @extend .g-clearbtn;
+    width:25px;
+    height:34px;
+    background-image:url(../img/sprite.png);
+    background-repeat:no-repeat;
+    background-position:0 -90px;
+    position:relative;
+}
+.h-cart__count{
+    display:block;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    line-height:18px;
+    text-align:center;
+    @include font-size(11px);
+    background:$primary;
+    color:#fff;
+    position:absolute;
+    top:-5px;
+    right:-10px;
+}
+
+.h-cart__inner{
+    width:300px;
+    margin:-1px -10px 0 0;
+
+    @include media($mobile){
+        margin:-1px 0 0 0;
+    }
+}
+
+
+/*Header Cart Product Table*/
+.h-cart__products{
+    width:100%;
+    margin-bottom:$project-line-height;
+
+    tr{
+        background:#fff;
+
+        &:hover{
+            background:#fff7f9;
+        }
+    }
+
+    td{
+        padding:14px 10px;
+        vertical-align:top;
+    }
+}
+
+.h-cart__thumb{
+    display:block;
+    width:50px;
+    height:50px;
+    position:relative;
+    background:#fff;
+}
+.h-cart__img{
+    @extend .g-img-centered;
+}
+.h-cart__link{
+    color:$primary-text-color;
+    font-weight:600;
+    @include font-size(13px);
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:$primary-text-color;
+    }
+}
+.h-cart__itemcount{
+    display:block;
+    @include font-size(13px);
+    color:#686868;
+    white-space:nowrap;
+}
+
+.h-cart__price{
+    font-weight:700;
+    white-space:nowrap;
+}
+.h-cart__del{
+    @extend .g-clearbtn;
+    color:$primary-text-color;
+    @include font-size(12px);
+}
+
+.h-cart__checkout{
+    padding:0 10px;
+    @extend .g-clearfix;
+}
+
+.h-cart__checkout-btn{
+    @extend .g-btn;
+    float:left;
+}
+
+.h-cart__total{
+    float:right;
+    font-weight:700;
+    text-align:right;
+    line-height:1.42856;
+}
+.h-cart__totalprice{
+    display:block;
+}

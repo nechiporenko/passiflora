@@ -1,0 +1,161 @@
+﻿@import "../../modules/_base.scss";
+/*Header Top Section*/
+.b-header{
+    background-repeat:no-repeat;
+    background-position:center top;
+
+    @include media($desktop){
+        background-image:url(../img/header-bg.png);
+        background-position:center -80px;
+    }
+
+    @include media($extra-large){
+        background-position:center -65px;
+    }
+}
+
+.b-header--has-slider{
+    @include media($desktop){
+        background-position:center 250px;
+    }
+    @include media($extra-large){
+        background-position:center 255px;
+    }
+}
+.b-header__top{
+    padding:5px 0;
+    width:100%;
+    background:$primary;
+    color:#fff;
+    box-shadow:0 1px 2px rgba(#eee, .8);
+    position:relative;
+    z-index:500;
+
+    @include media($desktop){
+        position:fixed;
+        top:0; left:0;
+    }
+}
+
+$hover-color:#eee;
+
+/*Header Social Links*/
+.b-header__social{
+    float:right;
+    margin-right:15px;
+
+    @include media($large){
+        margin-right:35px;
+        width:356px;
+    }
+}
+.h-social{
+    float:left;
+    @extend .g-clearlist;
+    font-size:0;
+    display:none;
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+
+    @include media($desktop){
+        display:block;
+    }
+
+}
+.h-social__item{
+    display:inline-block;
+    margin-left:15px;
+    @include font-size(12px);
+    &:first-child{
+        margin-left:0;
+    }
+}
+.h-social__link{
+    display:block;
+    width:26px;
+    height:26px;
+    border:1px solid #fff;
+    line-height:26px;
+    border-radius:50%;
+    text-align:center;
+    color:#fff;
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:$hover-color;
+        text-decoration:none;
+    }
+}
+
+/*Header Lang Switcher*/
+.h-lang{
+    float:right;
+    @extend .g-clearlist;
+}
+
+.h-lang__btn{
+    @extend .g-clearbtn;
+    padding:6px 0;
+    @include font-size(14px);
+    color:#fff;
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:$hover-color;
+    }
+}
+.h-lang__menu{
+    margin-top:4px;
+}
+
+/*Header User Settings*/
+.h-user{
+    @extend .h-lang;
+    margin-left:15px;
+}
+.h-user__btn{
+    @extend .h-lang__btn;
+    height:26px;
+    padding-left:26px;
+    background:url(../img/sprite.png) 0 0 no-repeat;
+    overflow:hidden;
+}
+.h-user__text{
+    display:none;
+    margin-left:6px;
+    text-align:left;
+
+    @include media($large){
+        display:inline-block;
+    }
+}
+
+.h-user__menu{
+    margin-top:4px;
+}
+
+/*Header Mobile Menu Button*/
+.b-header__mtgl{
+    float:left;
+    height:26px;
+    padding:0;
+    line-height:26px;
+    background:none;
+    border:none;
+    @include font-size(14px);
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:$hover-color;
+        outline:0;
+    }
+
+    @include media($desktop){
+        display:none;
+    }
+}
