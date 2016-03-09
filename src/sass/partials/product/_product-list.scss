@@ -1,16 +1,14 @@
 ﻿@import "../../modules/_base.scss";
 /*Product List*/
 .product-list{
+    @extend .g-clearfix;
     list-style-type:none;
     padding:0;
     margin:0 -15px 20px;
 }
 
 .product-list__item{
-    float:left;
-    width:100%;
-    min-height:1px;
-    padding:0 15px;
+    @extend .g-column;
     margin-bottom:60px;
 
     @include media($small){
@@ -207,6 +205,29 @@
     &:disabled{
         .product-list__icon{
             background-position:-150px -260px;
+        }
+    }
+}
+
+/*Product List Stepper*/
+.product-list__action{
+    .bootstrap-touchspin{
+        float:right;
+        width:60px;
+
+        .input-group-btn-vertical>.btn{
+            padding:6.5px 10px;
+            @include px2rem(padding, 6.5px 10px);
+            border-color:$border-color;
+        }
+
+        .input-group-btn-vertical .bootstrap-touchspin-up{
+            border-top-right-radius:2px;
+            border-bottom-color:#fff;
+        }
+        .input-group-btn-vertical .bootstrap-touchspin-down{
+            border-bottom-right-radius:2px;
+            border-top-color:#fff;
         }
     }
 }

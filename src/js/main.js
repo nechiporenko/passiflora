@@ -63,6 +63,17 @@ jQuery(document).ready(function ($) {
     }
 
     //
+    // Степперы (кол-во товаров)
+    //---------------------------------------------------------------------------------------
+    $('.js-stepper').TouchSpin({
+        verticalbuttons: true,
+        min: 1,
+        step: 1,
+        verticalupclass: 'glyphicon glyphicon-triangle-top',
+        verticaldownclass: 'glyphicon glyphicon-triangle-bottom'
+    });
+
+    //
     // Кнопка скролла страницы
     //---------------------------------------------------------------------------------------
     var initPageScroller = (function () {
