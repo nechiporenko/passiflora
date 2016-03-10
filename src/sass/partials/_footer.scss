@@ -1,3 +1,9 @@
 @import "../modules/base";
 
 /*Site Footer*/
+.b-footer{}
+
+@import "footer/_footer-main.scss";
+@import "footer/_social.scss";
+@import "footer/_contacts.scss";
+@import "footer/_footer-sole.scss";

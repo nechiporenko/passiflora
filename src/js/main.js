@@ -37,9 +37,65 @@ jQuery(document).ready(function ($) {
     //
     // Мобильное меню
     //---------------------------------------------------------------------------------------
-    var initMobileMenu = (function () {
-        //...
-    })();
+    function initMobileMenu() {
+        var $btn = $('.js-mtoggle'),
+            $menu = $('.js-mmenu'),
+            $submenu = $menu.find('.m-submenu'),
+            $s_btn,
+            method = {};
+
+        method.initSubmenu = function () {
+            $menu.find('li').has('ul').addClass('has-menu').append('<button type="button" class="m-menu__btn"><i class="icon-down-open-mini"></i></button>')
+            $s_btn = $menu.find('.m-menu__btn'); //заголовки суб-меню
+        }
+
+        method.hideSubMenu = function () {
+            $s_btn.removeClass('active');
+            $submenu.slideUp();
+        }
+
+        method.hideMenu = function () {
+            $btn.removeClass('active');
+            $menu.removeClass('active');
+            method.hideSubMenu();
+            $html.css('overflow', 'auto');
+            $overlay.unbind('click', method.hideMenu).hide();
+        }
+
+
+        method.showMenu = function () {
+            $btn.addClass('active');
+            $menu.addClass('active');
+            $html.css('overflow', 'hidden');
+            $overlay.show().bind('click', method.hideMenu);
+        }
+
+
+        method.initSubmenu();
+
+        $('.b-header__top').on('click', '.js-mtoggle', function () {//покажем - спрячем
+            if ($(this).hasClass('active')) {
+                method.hideMenu();
+            } else {
+                method.showMenu();
+            }
+        });
+
+        $menu.on('click', '.m-menu__label', method.hideMenu); //закроем по клику по заголовку
+
+        $menu.on('click', '.m-menu__btn', function () {//покажем - спрячем подменю
+            var $el = $(this);
+
+            if ($el.hasClass('active')) {
+                method.hideSubMenu();
+            } else {
+                method.hideSubMenu();
+                $el.addClass('active').parent('li').find('ul').slideDown();
+            }
+        });
+    }
+    initMobileMenu();
+
 
     //
     // Слайдер на главной

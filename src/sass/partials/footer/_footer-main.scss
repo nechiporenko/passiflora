@@ -1,0 +1,31 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Main Section*/
+.b-footer__main{
+    padding:27px 0 40px;
+    color:#fff;
+    background:#c4b4b6 url(../img/footer-bg.png) left bottom repeat-x;
+}
+
+.b-footer__col{
+    text-align:center;
+    @include media($tablet){
+        text-align:left;
+        @include span-columns(6);
+        @include omega(2n);
+    }
+
+    @include media($desktop){
+        @include omega-reset(2n);
+        @include span-columns(3);
+    }
+}
+
+.b-footer__title{
+    display:block;
+    margin-bottom:30px;
+    @include font-size(18px);
+    line-height:1.1;
+    color:#fff;
+    text-transform:uppercase;
+    font-weight:600;
+}

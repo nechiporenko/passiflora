@@ -1,0 +1,25 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Menu*/
+.f-menu{
+    list-style-type:none;
+    padding:0;
+
+    @include media($desktop){
+        margin:0;
+    }
+}
+
+.f-menu__item{
+    margin-bottom:15px;
+    @include font-size(14px);
+}
+
+.f-menu__link{
+    color:#fff !important;
+    line-height:1.1;
+    font-weight:600;
+
+    &.current{
+        text-decoration:underline;
+    }
+}

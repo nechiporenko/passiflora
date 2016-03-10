@@ -1,0 +1,29 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Bottom Section*/
+.b-footer__sole{
+    padding:6px 0;
+    background:$primary;
+    color:#fff;
+    text-align:center;
+
+    @include media($tablet){
+        text-align:left;
+    }
+}
+.b-footer__copyright{
+    @include font-size(12px);
+    line-height:2.16;
+}
+
+.b-footer__map-link{
+    color:#fff !important;
+    font-weight:600;
+    line-height:1.86;
+
+    @include media($tablet){
+        float:right;
+    }
+}
+.b-footer__banner-link{
+    text-decoration:none !important;
+}

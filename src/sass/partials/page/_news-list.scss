@@ -5,21 +5,33 @@
 }
 .news-list__item{
     @extend .service-list__item;
+
+    @include media($desktop){
+        margin-bottom:0;
+    }
 }
 .news-list__inner{
     max-width:370px;
-    margin:0 auto;
+    margin:25px auto 0;
     border:1px solid #eee;
     border-radius:$border-radius;
     box-shadow:0 5px 1px rgba($primary, .6), inset 0 0 1px rgba(#000, .2);
-    overflow:hidden;
     background:#fff;
+    position:relative;
+
+    &:before{
+        content:'';
+        display:block;
+        padding-top:56%;//карман для картинки, к которой применим svg clip-path
+    }
 }
 .news-list__thumb{
     display:block;
-    margin-bottom:15px;
     background:#bbb;
-    position:relative;
+    position:absolute;
+    left:0;
+    top:-50px;
+    width:100%;
 
     &:after{
         content:'';

@@ -1,0 +1,55 @@
+﻿@import "../../modules/_base.scss";
+/*Footer Contacts*/
+.f-info{
+    padding-left:25px;
+    margin-bottom:10px;
+    min-height:20px;
+    position:relative;
+    @include font-size(14px);
+    line-height:1.28;
+    font-weight:600;
+
+    &:before{
+        content:'';
+        display:block;
+        width:20px;
+        height:20px;
+        position:absolute;
+        left:0;
+        background:url(../img/sprite.png) no-repeat;
+    }
+}
+
+.f-info--call{
+    display:inline-block;
+
+    &:before{
+        background-position:-108px -90px;
+        top:50%;
+        margin-top:-7px;
+    }
+}
+.f-info--addr{
+    max-width:200px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+
+    &:before{
+        background-position:-150px -90px;
+        top:0;
+    }
+
+    @include media($tablet){
+        max-width:unset;
+        margin-left:0;
+        margin-right:0;
+    }
+}
+
+.f-info__tel{
+    display:block;
+    margin-bottom:5px;
+    color:#fff !important;
+    text-decoration:none;
+}

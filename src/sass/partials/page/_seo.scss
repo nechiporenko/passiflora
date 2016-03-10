@@ -1,0 +1,10 @@
+﻿@import "../../modules/_base.scss";
+/*SEO section*/
+.b-seo{
+    margin:$project-line-height 0;
+    color:$text-color-light;
+
+    p{
+        margin-bottom:2*$project-line-height;
+    }
+}

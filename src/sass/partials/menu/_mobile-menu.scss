@@ -1,2 +1,140 @@
 ﻿@import "../../modules/_base.scss";
 /*Mobile Menu*/
+.m-nav{
+    position:fixed;
+    @include px2rem(width, 256px);
+    height:100%;
+    top:0;
+    @include px2rem(left, -256px);
+    z-index:3200;//поверх оверлея
+    overflow-x:hidden;
+    overflow-y:auto;
+    will-change:left;
+    @include transition(left .3s ease);
+    @include linear-gradient(to bottom, #222, #444);
+
+    @include media($desktop){
+        display:none;
+    }
+
+    &.active{
+        left:0;
+    }
+}
+
+.m-menu{
+    @extend .g-clearlist;
+}
+
+.m-menu__item{
+    position:relative;
+
+    &:first-child{
+        border-top:none;
+    }
+
+    &.has-menu{
+        .m-menu__link{
+            margin-right:35px;
+            border-right:1px solid #808080;
+        }
+    }
+}
+
+.m-menu__item,
+.m-submenu__item{
+    border-top:1px solid #808080;
+    border-bottom:1px solid #000;
+}
+
+.m-menu__btn{
+    display:block;
+    width:35px;
+    height:38px;
+    border:none;
+    padding:0;
+    background:none;
+    position:absolute;
+    top:2px; right:0;
+    @include transition(transform .3s ease);
+    outline:0;
+    
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin:0;
+        @include transform(translate(-50%, -50%));
+        color:$border-color;
+    }
+   
+    &.active{
+        @include transform(rotate(-180deg));
+    }
+}
+
+.m-menu__link,
+.m-submenu__link{
+    display:block;
+    @include px2rem(padding, 10px 12px);
+    @include font-size(14px);
+    line-height:1.2;
+    color:#fff;
+    text-decoration:none;
+
+    &.current{
+        color:$primary-text-color;
+    }
+
+    &:hover,
+    &:active,
+    &:focus{
+        text-decoration:none;
+        color:$primary;
+    }
+}
+
+.m-menu__link{
+    text-transform:uppercase;
+}
+
+.m-menu__label{
+    display:block;
+    margin:0;
+    @include px2rem(height, 36px);
+    @include px2rem(line-height, 36px);
+    @include px2rem(padding, 0 30px 0 12px);
+    border-bottom:1px solid #000;
+    @include font-size(18px);
+    color:$border-color;
+    text-transform:uppercase;
+    box-sizing:border-box;
+    cursor:pointer;
+    outline:0;
+
+    &:after{
+        content:'\e80e';
+        font-family:'fontello';
+        position:absolute;
+        right:12px;
+    }
+
+    @include media($tablet){
+        @include px2rem(height, 44px);
+        @include px2rem(line-height, 44px);
+    }
+}
+
+.m-menu__divider{
+   border-top:1px solid $primary;
+}
+
+/*Mobile Submenu*/
+.m-submenu{
+    @extend .g-clearlist;
+    display:none;//покажем скриптом
+}
+.m-submenu__link{
+    padding-left:25px;
+    @include font-size(14px);
+}
