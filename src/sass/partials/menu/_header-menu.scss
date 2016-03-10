@@ -26,14 +26,7 @@
 .h-menu__link{
     display:block;
     padding:6px 0;
-    color:#fff;
-
-    &:hover,
-    &:active,
-    &:focus{
-        color:#eee;
-        text-decoration:none;
-    }
+    color:#fff !important;
 
     &.current{
         text-decoration:underline;

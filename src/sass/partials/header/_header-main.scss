@@ -74,7 +74,6 @@
     &:hover,
     &:active,
     &:focus{
-        color:$primary;
-        text-decoration:none;
+        color:$primary-text-color;
     }
 }

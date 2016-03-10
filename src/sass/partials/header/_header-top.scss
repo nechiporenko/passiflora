@@ -37,7 +37,6 @@
     }
 }
 
-$hover-color:#eee;
 
 /*Header Social Links*/
 .b-header__social{
@@ -68,6 +67,7 @@ $hover-color:#eee;
     display:inline-block;
     margin-left:15px;
     @include font-size(12px);
+
     &:first-child{
         margin-left:0;
     }
@@ -80,13 +80,14 @@ $hover-color:#eee;
     line-height:26px;
     border-radius:50%;
     text-align:center;
-    color:#fff;
+    color:#fff !important;
+    @include transition(transform .3s ease); 
 
     &:hover,
     &:active,
     &:focus{
-        color:$hover-color;
         text-decoration:none;
+        @include transform(translateX(3px));
     }
 }
 
@@ -105,7 +106,7 @@ $hover-color:#eee;
     &:hover,
     &:active,
     &:focus{
-        color:$hover-color;
+        text-decoration:underline;
     }
 }
 .h-lang__menu{
@@ -118,11 +119,21 @@ $hover-color:#eee;
     margin-left:15px;
 }
 .h-user__btn{
-    @extend .h-lang__btn;
+    @extend .g-clearbtn;
+    padding:6px 0 6px 26px;
     height:26px;
-    padding-left:26px;
+    @include font-size(14px);
+    color:#fff;
     background:url(../img/sprite.png) 0 0 no-repeat;
     overflow:hidden;
+
+    &:hover,
+    &:active,
+    &:focus{
+        .h-user__text{
+            text-decoration:underline;
+        }
+    }
 }
 .h-user__text{
     display:none;
@@ -151,7 +162,6 @@ $hover-color:#eee;
     &:hover,
     &:active,
     &:focus{
-        color:$hover-color;
         outline:0;
     }
 

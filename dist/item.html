@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boilerplate</title>
+    <title>Empty Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -23,7 +23,7 @@
        <div class="b-header__top">
            <a href="index.html" class="b-header__logo">Passiflora</a>
            <div class="container">
-               <button type="button" class="b-header__mtgl"><i class="glyphicon glyphicon-menu-hamburger"></i> Меню</button>
+               <button type="button" class="b-header__mtgl js-mtoggle"><i class="glyphicon glyphicon-menu-hamburger"></i> Меню</button>
                <!--TOP MENU START-->
                <ul class="h-menu">
                    <li class="h-menu__item">
@@ -54,41 +54,40 @@
                    </li>
                </ul>
                <!--/LANG SWITCHER END-->
-                
-                <div class="b-header__social">
-                    <!--SOCIAL LINKS START-->
-                    <ul class="h-social">
-                        <li class="h-social__item">
-                            <a href="#" class="h-social__link"><i class="icon-vkontakte"></i></a>
-                        </li>
-                        <li class="h-social__item">
-                            <a href="#" class="h-social__link"><i class="icon-facebook"></i></a>
-                        </li>
-                        <li class="h-social__item">
-                            <a href="#" class="h-social__link"><i class="icon-instagramm"></i></a>
-                        </li>
-                        <li class="h-social__item">
-                            <a href="#" class="h-social__link"><i class="icon-gplus"></i></a>
-                        </li>
-                    </ul>
-                    <!--/SOCIAL LINKS END-->
 
-                    <!--USER MENU START-->
-                    <ul class="h-user">
-                        <li class="dropdown">
-                            <button type="button" class="h-user__btn dropdown-toggle" data-toggle="dropdown">
-                                <span class="h-user__text">Личный кабинет</span>
-                            </button>
-                            <ul class="h-user__menu dropdown-menu dropdown-menu-right">
-                                <li><a href="#">Мои настройки</a></li>
-                                <li><a href="#">История покупок</a></li>
-                                <li><a href="#">Корзина</a></li>
-                                <li><a href="#">Выход</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!--/USER MENU END-->
-                </div>
+               <div class="b-header__social">
+                   <!--SOCIAL LINKS START-->
+                   <ul class="h-social">
+                       <li class="h-social__item">
+                           <a href="#" class="h-social__link" target="_blank"><i class="icon-vkontakte"></i></a>
+                       </li>
+                       <li class="h-social__item">
+                           <a href="#" class="h-social__link" target="_blank"><i class="icon-facebook"></i></a>
+                       </li>
+                       <li class="h-social__item">
+                           <a href="#" class="h-social__link" target="_blank"><i class="icon-instagramm"></i></a>
+                       </li>
+                       <li class="h-social__item">
+                           <a href="#" class="h-social__link" target="_blank"><i class="icon-gplus"></i></a>
+                       </li>
+                   </ul>
+                   <!--/SOCIAL LINKS END-->
+                   <!--USER MENU START-->
+                   <ul class="h-user">
+                       <li class="dropdown">
+                           <button type="button" class="h-user__btn dropdown-toggle" data-toggle="dropdown">
+                               <span class="h-user__text">Личный кабинет</span>
+                           </button>
+                           <ul class="h-user__menu dropdown-menu dropdown-menu-right">
+                               <li><a href="#">Мои настройки</a></li>
+                               <li><a href="#">История покупок</a></li>
+                               <li><a href="#">Корзина</a></li>
+                               <li><a href="#">Выход</a></li>
+                           </ul>
+                       </li>
+                   </ul>
+                   <!--/USER MENU END-->
+               </div>
            </div><!--/container-->
        </div>
        <!--/HEADER TOP SECTION END-->
@@ -116,7 +115,7 @@
                                <tr>
                                    <td>
                                        <a href="product.html" class="h-cart__thumb">
-                                           <img src="http://lorempixel.com/50/50/nature/1" class="h-cart__img" alt="Product" />
+                                           <img src="http://placehold.it/50x50" class="h-cart__img" alt="Product" />
                                        </a>
                                    </td>
                                    <td>
@@ -135,7 +134,7 @@
                                <tr>
                                    <td>
                                        <a href="product.html" class="h-cart__thumb">
-                                           <img src="http://lorempixel.com/50/50/nature/2" class="h-cart__img" alt="Product" />
+                                           <img src="http://placehold.it/50x50" class="h-cart__img" alt="Product" />
                                        </a>
                                    </td>
                                    <td>
@@ -165,7 +164,6 @@
                    </ul>
                </div>
                <!--/HEADER CART END-->
-
                <!--HEADER SEARCH BLOCK START-->
                <div class="h-search">
                    <form class="h-search__form">
@@ -173,44 +171,9 @@
                        <input type="text" class="h-search__input" placeholder="Поиск" />
                        <button type="submit" class="h-search__btn"><i class="glyphicon glyphicon-search"></i></button>
                    </form>
-                   <ul class="h-search-list">
-                       <li class="h-search-list__item">
-                           <table class="h-search-list__table">
-                               <tr>
-                                   <td>
-                                       <a href="product.html" class="h-search-list__thumb">
-                                           <img src="http://lorempixel.com/50/50/nature/1" class="h-search-list__img" alt="Product" />
-                                       </a>
-                                   </td>
-                                   <td>
-                                       <a href="product.html" class="h-search-list__link">Влюбленная пора</a>
-                                   </td>
-                                   <td>
-                                       <span class="h-search-list__price">1 620</span>&nbsp;грн
-                                   </td>
-                               </tr>
-                               <tr>
-                                   <td>
-                                       <a href="product.html" class="h-search-list__thumb">
-                                           <img src="http://lorempixel.com/50/50/nature/2" class="h-search-list__img" alt="Product" />
-                                       </a>
-                                   </td>
-                                   <td>
-                                       <a href="product.html" class="h-search-list__link">Влюбленная пора</a>
-                                   </td>
-                                   <td>
-                                       <span class="h-search-list__price">650</span>&nbsp;грн
-                                   </td>
-                               </tr>
-                           </table>
-                       </li>
-                       <li class="h-search-list__item">
-                           <a href="search.html" class="h-search-list__more">Показать все результаты</a>
-                       </li>
-                   </ul>
                </div>
                <!--/HEADER SEARCH BLOCK END-->
-           </div>
+           </div><!--/container-->
        </div>
        <!--/HEADER MAIN SECTION END-->
 
@@ -326,7 +289,227 @@
    </header>
     <!--/HEADER END-->
 
-    <main class="js-scroll" style="height:1500px"></main>
+    <main class="page__content">
+        <div class="container">
+
+        </div><!--/container-->
+    </main>
+
+    <!--MOBILE MENU START-->
+    <nav class="m-nav js-mmenu">
+        <ul class="m-menu">
+            <li class="m-menu__item">
+                <label class="m-menu__label">Меню</label>
+            </li>
+            <li class="m-menu__item">
+                <a href="index.html" class="m-menu__link">Главная</a>
+            </li>
+            <li class="m-menu__divider"></li>
+            <li class="m-menu__item">
+                <a href="catalog.html" class="m-menu__link">
+                    Букеты и композиции
+                </a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Букеты</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Композиции</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__item">
+                <a href="catalog.html" class="m-menu__link">
+                    Букет невесты
+                </a>
+            </li>
+            <li class="m-menu__item">
+                <a href="catalog.html" class="m-menu__link">
+                    Свадебная флористика
+                </a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Оформление зала</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Оформление свадебного кортежа</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Выездная церемония</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Оформление номера молодоженов</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Свадебный декор</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Пригласительные на свадьбу</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__item m-menu__item--4">
+                <a href="catalog.html" class="m-menu__link">
+                    Оформление мероприятий
+                </a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Корпоративная флористика</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Оформление праздников</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Новогодняя флористика</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Траурная флористика</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__item m-menu__item--5">
+                <a href="catalog.html" class="m-menu__link">
+                    Собрать букет
+                </a>
+            </li>
+            <li class="m-menu__item m-menu__item--6">
+                <a href="catalog.html" class="m-menu__link">
+                    Подарки и презенты
+                </a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Игрушки</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Шары воздушные</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Подарочные наборы</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Открытки и пригласительные</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="catalog.html" class="m-submenu__link">Декор</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__divider"></li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">О нас</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Услуги</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Доставка</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Оплата</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+    <!--/MOBILE MENU END-->
+    <!--FOOTER START-->
+    <footer class="b-footer">
+        <div class="b-footer__main">
+            <div class="container">
+                <div class="b-footer__col">
+                    <span class="b-footer__title">Информация</span>
+                    <ul class="f-menu">
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Новости</a>
+                        </li>
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Наши услуги</a>
+                        </li>
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Политика конфиденциальности</a>
+                        </li>
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Связаться с нами</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-footer__col">
+                    <span class="b-footer__title">Доставка цветов</span>
+                    <ul class="f-menu">
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Доставка</a>
+                        </li>
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Оплата</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-footer__col">
+                    <span class="b-footer__title">Личный кабинет</span>
+                    <ul class="f-menu">
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Мои заказы</a>
+                        </li>
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Мой адрес</a>
+                        </li>
+                        <li class="f-menu__item">
+                            <a href="#" class="f-menu__link">Личная информация</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-footer__col">
+                    <span class="b-footer__title">Найти нас</span>
+                    <!--FOOTER SOCIAL LINK START-->
+                    <ul class="f-social">
+                        <li class="f-social__item">
+                            <a href="#" class="f-social__link" target="_blank"><i class="icon-vkontakte"></i></a>
+                        </li>
+                        <li class="f-social__item">
+                            <a href="#" class="f-social__link" target="_blank"><i class="icon-facebook"></i></a>
+                        </li>
+                        <li class="f-social__item">
+                            <a href="#" class="f-social__link" target="_blank"><i class="icon-instagramm"></i></a>
+                        </li>
+                        <li class="f-social__item">
+                            <a href="#" class="f-social__link" target="_blank"><i class="icon-gplus"></i></a>
+                        </li>
+                    </ul>
+                    <!--/FOOTER SOCIAL LINK END-->
+                    <!--FOOTER CONTACTS START-->
+                    <div class="f-info f-info--call">
+                        <a href="tel:+38099997112" class="f-info__tel">+380 99-99-71-12</a>
+                        <a href="tel:+38044191112" class="f-info__tel">+380 44-19-11-12</a>
+                    </div>
+                    <div class="f-info f-info--addr">
+                        Киев, м.Льва Толстого
+                    </div>
+                    <!--/FOOTER CONTACTS END-->
+                </div>
+            </div><!--/container-->
+        </div><!--/b-footer__main-->
+        <div class="b-footer__sole">
+            <div class="container">
+                <div class="col-sm-4">
+                    <a href="#" target="_blank" class="b-footer__banner-link">
+                        <img src="img/flag-undp.jpg" alt="Banner" />
+                    </a>
+                    <a href="#" target="_blank" class="b-footer__banner-link">
+                        <img src="img/flag-japan.jpg" alt="Banner" />
+                    </a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <span class="b-footer__copyright">Интернет-магазин Passiflora &copy;</span>
+                </div>
+                <div class="col-sm-4">
+                    &nbsp;
+                    <!--<a href="#" class="b-footer__map-link">Карта сайта</a>-->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/FOOTER END-->
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
