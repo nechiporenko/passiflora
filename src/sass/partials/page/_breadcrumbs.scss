@@ -1,3 +1,34 @@
 ﻿@import "../../modules/_base.scss";
 /*Breadcrumbs*/
-.breadcrumbs{}
+.breadcrumbs{
+    padding:0;
+    margin:22px 0 30px;
+    @include font-size(12px);
+    line-height:1.1;
+    list-style-type:none;
+    color:$primary-text-color;
+}
+.breadcrumbs__item{
+    display:inline-block;
+    position:relative;
+
+    &:after{
+        content:'\e80c';
+        font-family:'fontello';
+        margin:0 2px;
+    }
+
+    &:last-child{
+        &:after{
+            display:none;
+        }
+    }
+}
+.breadcrumbs__link{
+    color:#848484;
+
+    &:hover,
+    &:active{
+        color:$primary-text-color;
+    }
+}
