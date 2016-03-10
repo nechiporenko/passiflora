@@ -1,7 +1,7 @@
 ﻿@import "../../modules/_base.scss";
 /*Footer Bottom Section*/
 .b-footer__sole{
-    padding:6px 0;
+    padding:8px 0;
     background:$primary;
     color:#fff;
     text-align:center;
@@ -11,14 +11,20 @@
     }
 }
 .b-footer__copyright{
+    display:inline-block;
     @include font-size(12px);
-    line-height:2.16;
+    height:22px;
+    line-height:22px;
+    white-space:nowrap;
 }
 
 .b-footer__map-link{
+    display:inline-block;
+    height:22px;
+    line-height:22px;
+    white-space:nowrap;
     color:#fff !important;
     font-weight:600;
-    line-height:1.86;
 
     @include media($tablet){
         float:right;
@@ -26,4 +32,5 @@
 }
 .b-footer__banner-link{
     text-decoration:none !important;
+    margin-right:5px;
 }

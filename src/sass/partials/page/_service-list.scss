@@ -2,11 +2,10 @@
 /*Services List*/
 .service-list{
     @extend .product-list;
-    margin-bottom:55px;
 }
 .service-list__item{
     @extend .g-column;
-    margin-bottom:65px;
+    margin-bottom:35px;
 
     @include media($desktop){
         width:(100%)/3;

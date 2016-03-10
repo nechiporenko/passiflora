@@ -216,6 +216,22 @@
 
        <!--HEADER SLIDER START-->
        <div class="b-header__slider">
+           <style type="text/css" scoped>
+               .b-header__slider{
+                       -webkit-clip-path:url(#sliderClip);
+                        clip-path:url(#sliderClip);
+                        -webkit-mask:url(#sliderPath);
+                        -webkit-mask-repeat:no-repeat;
+                   }
+           </style>
+           <svg width="0" height="0" version="1.1" viewBox="0 0 1 1">
+               <defs>
+                   <clipPath id="sliderClip" clipPathUnits="objectBoundingBox">
+                       <path d="m -5e-6,0 v 0.86222 c 0.05432433,0.00375 0.1245946,0.02213 0.16405406,0.04426 0,0 0.16675676,0.0931 0.3327027,0.0935 0.16567568,4.2e-4 0.33378379,-0.0923 0.33378379,-0.0923 0.0405405,-0.0225 0.11243243,-0.0409 0.16945945,-0.0438 V 0 h -1 z" fill=""></path>
+                   </clipPath>
+               </defs>
+               <path d="m -5e-6,0 v 0.86222 c 0.05432433,0.00375 0.1245946,0.02213 0.16405406,0.04426 0,0 0.16675676,0.0931 0.3327027,0.0935 0.16567568,4.2e-4 0.33378379,-0.0923 0.33378379,-0.0923 0.0405405,-0.0225 0.11243243,-0.0409 0.16945945,-0.0438 V 0 h -1 z" id="sliderPath"></path>
+           </svg>
            <div class="h-slider__nav">
                <div class="container">
                    <span class="h-slider__arrow h-slider__arrow--prev"></span>
@@ -398,6 +414,7 @@
 
     <main class="page__content">
         <div class="container">
+            
             <!--PRODUCT LIST START-->
             <span class="page__title">Топ продаж</span>
             <ul class="product-list">
@@ -626,6 +643,19 @@
 
             <!--SERVICES LIST START-->
             <span class="page__title">Наши услуги</span>
+            <style type="text/css" scoped>
+                .service-list__thumb {
+                    -webkit-clip-path: url(#serviceClip);
+                    clip-path: url(#serviceClip);
+                }
+            </style>
+            <svg width="0" height="0" version="1.1">
+                <defs>
+                    <clipPath id="serviceClip" clipPathUnits="objectBoundingBox">
+                        <path d="m -5e-6,0 v 0.86222 c 0.05432433,0.00375 0.1245946,0.02213 0.16405406,0.04426 0,0 0.16675676,0.0931 0.3327027,0.0935 0.16567568,4.2e-4 0.33378379,-0.0923 0.33378379,-0.0923 0.0405405,-0.0225 0.11243243,-0.0409 0.16945945,-0.0438 V 0 h -1 z"></path>
+                    </clipPath>
+                </defs>
+            </svg>
             <ul class="service-list">
                 <li class="service-list__item">
                     <div class="service-list__inner" data-match-height>
@@ -695,6 +725,19 @@
 
             <!--LAST NEWS LIST START-->
             <span class="page__title">НОВОСТИ</span>
+            <style type="text/css" scoped>
+                .news-list__thumb {
+                    -webkit-clip-path: url(#newsClip);
+                    clip-path: url(#newsClip);
+                }
+            </style>
+            <svg width="0" height="0" version="1.1">
+                <defs>
+                    <clipPath id="newsClip" clipPathUnits="objectBoundingBox">
+                        <path d="m 1.0000051,0.24611003 c 0,-0.0575 -0.00865,-0.0642 -0.0445828,-0.0642 -0.0359364,0 -0.11375362,0 -0.11375362,0 -0.0375576,0 -0.092678,-0.0115 -0.12212976,-0.0279 0,0 -0.11051123,-0.0602 -0.21967147,-0.0602 v 0 h -2.702e-4 0 -2.7021e-4 v 0 c -0.10916024,0 -0.21967146,0.0602 -0.21967146,0.0602 -0.0294516,0.0168 -0.084302,0.0279 -0.12212977,0.0279 0,0 -0.0780874,0 -0.11375362,0 -0.03566623,0 -0.04377219,0.007 -0.04377219,0.0642 0,0 0,4e-4 0,4e-4 V 1.09375 H 1.0000051 V 0.24651003 c 0,0 0,-4e-4 0,-4e-4 z"></path>
+                    </clipPath>
+                </defs>
+            </svg>
             <ul class="news-list">
                 <li class="news-list__item">
                     <figure class="news-list__inner">
@@ -957,18 +1000,17 @@
             <div class="container">
                 <div class="col-sm-4">
                     <a href="#" target="_blank" class="b-footer__banner-link">
-                        <img src="img/flag-undp.jpg" alt="Banner" />
+                        <img src="http://placehold.it/40x20" alt="Banner" />
                     </a>
                     <a href="#" target="_blank" class="b-footer__banner-link">
-                        <img src="img/flag-japan.jpg" alt="Banner" />
+                        <img src="http://placehold.it/34x20" alt="Banner" />
                     </a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <span class="b-footer__copyright">Интернет-магазин Passiflora &copy;</span>
+                    <span class="b-footer__copyright">Интернет-магазин Passiflora <i class="glyphicon glyphicon-copyright-mark"></i></span>
                 </div>
                 <div class="col-sm-4">
-                    &nbsp;
-                    <!--<a href="#" class="b-footer__map-link">Карта сайта</a>-->
+                    <a href="#" class="b-footer__map-link">Карта сайта</a>
                 </div>
             </div>
         </div>
