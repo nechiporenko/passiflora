@@ -3,7 +3,7 @@
 .g-btn{
     display:inline-block;
     vertical-align:middle;
-    @include px2rem(margin-bottom, $project-line-height);
+    @include px2rem(margin-bottom, $project-font-size);
     @include px2rem(height, 36px);
     @include px2rem(line-height, 35px);
     @include px2rem(padding, 0 28px);
@@ -70,8 +70,8 @@
     &:hover,
     &:active,
     &:focus{
-        background-color: $primary-text-color;
-        border-color: $primary-text-color;
+        background-color: darken($primary, 3%);
+        border-color: darken($primary, 3%);
     }
 
     &:disabled,

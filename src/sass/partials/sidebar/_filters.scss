@@ -1,0 +1,145 @@
+﻿@import "../../modules/_base.scss";
+/*Sidebar filters*/
+.filter-list{
+    list-style-type:none;
+    margin-bottom:30px;
+    padding:0;
+}
+.filter-list__item{
+    margin-bottom:15px;
+}
+
+/*Sidebar Color Filter*/
+.color-list{
+    @extend .filter-list;
+    margin-bottom:0;
+    font-size:0;
+}
+
+.color-list__item{
+    display:inline-block;
+    width:32px;
+    margin:0 15px 15px 0;
+    @include font-size(14px);
+}
+
+.color-list__thumb{
+    height:32px;
+    margin:0;
+    border-radius:2px;
+    border:1px solid $border-color;
+    background-color:$primary;
+    background-position:center center;
+    position:relative;
+    cursor:pointer;
+
+    &:after{
+        content:'';
+        width:12px;
+        height:12px;
+        background-image:url(../img/sprite.png);
+        background-repeat:no-repeat;
+        background-position:0 -430px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin:-6px 0 0 -6px;
+        display:none;
+    }
+
+    &.active{
+        &:after{
+            display:block;
+        }
+    }
+}
+
+.color-list__thumb--alt{
+    &:after{
+        background-position:-30px -430px;
+    }
+}
+
+.color-list__input{
+    display:none;
+}
+
+
+/*Filter Clean Button*/
+.filter-clean{
+    margin:-40px 0 60px;
+
+    @include media($desktop){
+        text-align:right;
+    }
+}
+.filter-clean__btn{
+    @extend .g-clearbtn;
+    height:20px;
+    line-height:20px;
+    white-space:nowrap;
+    color:$text-color;
+    border-bottom:1px dashed $text-color;
+
+    &:hover,
+    &:active{
+        color:$primary-text-color;
+        border-bottom-color:$primary-text-color;
+    }
+}
+
+
+/*Custom checkboxes & radio*/
+input[type=checkbox].css-checkbox,
+input[type=radio].css-radio {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:30px;
+	display:inline-block;
+    @include px2rem(line-height, 19px);
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAFVBMVEUAAADo6Ojo6Ojo6Ojo6Ojo6Ojo6OgGSuaNAAAABnRSTlMA5ztKSeQoqbnFAAAAJElEQVQI12NwTIOARAcGIQYIYBJgSGCAgoRBzERyryHUF6kGALUyEsW3wQgfAAAAAElFTkSuQmCC) left top no-repeat;
+	vertical-align:middle;
+	cursor:pointer;
+    @include transition(all .1s ease-in);
+
+    &:hover{
+        color:$primary;
+        background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAFVBMVEUAAAD/tsH/tsH/tsH/tsH/tsH/tsEHqRguAAAABnRSTlMA5ztKSeQoqbnFAAAAJElEQVQI12NwTIOARAcGIQYIYBJgSGCAgoRBzERyryHUF6kGALUyEsW3wQgfAAAAAElFTkSuQmCC) left top no-repeat;
+    }
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label,
+label.css-label {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAOVBMVEX/tsH/tsH/tsH/tsH/tsH/tsH/////usT/2+D/9Pb/xc7/9/j/4eX/7/L/6u3/1dv/wMr/7O7/ydFNDvXbAAAABXRSTlPm50pJ5NWGl3QAAABiSURBVBjTnc87EoAgDARQRN2EP3r/wxosUEKlW8DwhiGLWc0+RkRIRWjOP8uRtBWAlVUg9HsUj7Yl4OzvMcD3Gp8Z5ADvAUevuXIOzYcuBRJW/TKQdGdyoX7+74yLsYuizV644QfFqmEk5QAAAABJRU5ErkJggg==) left top no-repeat;
+    color:$primary-text-color;
+}
+
+
+label.css-label,
+label.css-radio-label {
+    display:inline-block;
+    margin-bottom:0;
+    -webkit-touch-callout: none;
+    @include user-select(none);
+    color:#847c80;
+    font-weight:400;
+    @include font-size(14px);
+}
+
+
+input[type=radio].css-radio + label.css-radio-label {
+	padding-left:30px;
+	display:inline-block;
+    @include px2rem(line-height, 20px);
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAwUExURQAAAKSRhqSRhqSRhqSRhqSRhqSRhqSRhqSRhv///9rSzf38/PPw7r2vp+DZ1t7X008XqkoAAAAJdFJOUwDQQ/Io+poBopHtZu4AAABqSURBVBjTbZBHDsAwCAQpbuD2/9/GTlNQmBsjkNgF2FDCGDERPATs2mpt2jFchljlRvlcDDzkZfDay6jyQTEDdTF0gqRWaQJsVjWEWK2qEfivnMMyrZrFe8J51QnkxfbKWdF3hbwqzHs6AO/JCPFIofFHAAAAAElFTkSuQmCC) left top no-repeat;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=radio].css-radio:checked + label.css-radio-label,
+label.css-radio-label {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA8UExURQAAAKSRhqSRhqSRhqSRhqSRhqSRhqSRhqSRhqSRhv///6SRhvLv7amXjcG0rb2vp9jQy9vTz+DZ1t7X0ysu4f4AAAAKdFJOUwCamaIo2wFD8sXe3pW6AAAAgElEQVQY022Q2xLDIAhEMRFBES/J//9rJGk77ZTz4rquDiuAQRuK4EbwJuY+ayl19hwfh3iUF4PvYOSjfDh45VIe5YuRE1A3VZtqq6Y6QZjmqCzUvBkAbW1y0+wUQSytj6WmBfjfci7u5+/z5+4N4YzqFPJqe5+zqlNAYQyUbHcBik0LUTqhP30AAAAASUVORK5CYII=) left top no-repeat;
+    color:$primary;
+}

@@ -19,23 +19,25 @@ textarea {
     display:inline-block;
     vertical-align:middle;
     width:100%;
-    @include px2rem(margin-bottom, $project-line-height);
+    @include px2rem(margin-bottom, $project-font-size);
     @include px2rem(padding, 0 10px);
     background-color: #fff;
     border: 1px solid $border-color;
-    border-radius:$border-radius;
+    border-radius:2px;
     color:$text-color;
     box-shadow: none;
-    box-sizing: border-box;
+    font-weight:600;
+    @include font-size(14px);
 
     @include placeholder{
-        color:#888888;
+        color:#847c80;
         text-overflow:ellipsis;
     }
 
     &:hover,
     &:focus{
         border-color:$primary;
+        box-shadow:inset 0 0 4px rgba($primary, .8);
         outline:0;
     }
 
@@ -56,7 +58,7 @@ textarea {
 
 .g-input,
 .g-select{
-    @include px2rem(height, 38px);
+    @include px2rem(height, 40px);
 }
 
 .g-textarea{
@@ -66,7 +68,7 @@ textarea {
 .g-label{
     display: block;
     @include px2rem(margin-bottom, $project-line-height/3);
-    font-weight: bold;
+    font-weight: 600;
 
     &.error{
         color:red;
@@ -76,42 +78,11 @@ textarea {
     display: inline-block;
     @include px2rem(margin-left, $project-line-height/3);
     font-weight: normal;
-}
 
-input[type="checkbox"],
-input[type="radio"] {
-  display: inline; }
-
-
-
-
-/*form notices*/
-.g-notice{
-    @include px2rem(padding, 16px 20px);
-    @include px2rem(margin, $project-line-height/2 0);
-    border:1px solid $primary;
-    border-radius:$border-radius;
-    text-align:center;
-    position:relative;
-    display:none;
-
-    p{
-        @include px2rem(margin, $project-line-height/2 0);
+    input[type="checkbox"],
+    input[type="radio"]{
+      display: inline;
     }
 }
-.g-notice__close{
-    position:absolute;
-    top:5px;
-    right:5px;
-    text-decoration:none;
-    cursor:pointer;
-}
 
-.g-notice--bad{
-    color:red;
-    border-color:red;
 
-    .g-notice__close{
-        color:red;
-    }
-}

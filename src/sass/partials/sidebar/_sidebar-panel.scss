@@ -19,13 +19,32 @@
         top:12px;
     }
 }
+
+.side-title__addon,
+.side-title__inner{
+    @include font-size(18px);
+    color:$primary-text-color;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
 .side-title__inner{
     display:inline-block;
     background:#fff;
     padding:0 10px;
     line-height:1.2;
-    @include font-size(18px);
-    color:$primary-text-color;
-    text-transform:uppercase;
-    font-weight:600;
+}
+.side-title__addon{
+    display:block;
+    line-height:1.4;
+}
+
+/*Sidebar Form*/
+.side-panel__form{
+    @include font-size(13px);
+    color:#847c80;
+
+    .g-btn{
+        margin-bottom:0;
+    }
 }

@@ -6,6 +6,8 @@
 // Степперы (кол-во товаров)
 // Стилизация Select (сортировка товаров в каталоге)
 // Слайдер (фильтр) цен в каталоге
+// Выбор цвета (чекбокс colorbox)
+// Маска для телефонного номера
 // Кнопка скролла страницы
 
 jQuery(document).ready(function ($) {
@@ -198,6 +200,51 @@ jQuery(document).ready(function ($) {
     if ($('.js-priceslider').length && !$html.hasClass('lt-ie9')) {
         initPriceSlider();
     };
+
+    //
+    // Выбор цвета (чекбокс colorbox)
+    //---------------------------------------------------------------------------------------
+    function initColorbox() {
+        var $colorbox = $('.js-colorlist .color-list__thumb');
+        $colorbox.each(function () {
+            var $el = $(this),
+                $check = $el.find('input');
+            if ($el.data('color') !== '') { //передадим цвет через data-атрибут
+                $el.css('background-color', $(this).data('color'));
+            }
+            if ($el.data('img') !== '') {//если нужно передать картинку вместо цвета
+                $el.css('background-image', $(this).data('img'));
+            }
+            if ($check.is(':checked')) {//если чекбокс включен - покажем галочку
+                $el.addClass('active');
+            }
+        });
+        $colorbox.on('click', function () {
+            var $el = $(this),
+                $target = $el.find('input');
+            if ($target.prop('type') == 'radio') { //если кликаем по радио-кнопке
+                if ($el.hasClass('active')) {
+                    return false; //кликнули по активной кнопке - ничего не делаем
+                } else {
+                    var $ul = $el.parents('ul');
+                    $ul.find('.colorbox').removeClass('active');
+                    $el.addClass('active').find('input').prop('checked', true);
+                }
+            } else { //если кликаем на чекбокс
+                if ($el.hasClass('active')) {
+                    $el.removeClass('active').find('input').prop('checked', false);
+                } else {
+                    $el.addClass('active').find('input').prop('checked', true);
+                }
+            }
+        });
+    };
+    if ($('.js-colorlist').length) { initColorbox(); };
+
+    //
+    // Маска для телефонного номера
+    //---------------------------------------------------------------------------------------
+    $('.js-phone').mask('+380 99 999-99-99');
 
     //
     // Кнопка скролла страницы
