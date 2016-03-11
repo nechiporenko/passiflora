@@ -1,0 +1,31 @@
+﻿@import "../../modules/_base.scss";
+/*Sidebar Panel Block*/
+.side-panel{
+    @extend .product-list__inner;
+    max-width:750px;
+    padding:10px 15px 20px;
+    margin-bottom:60px;
+}
+
+.side-title{
+    @extend .g-title--line;
+    margin-bottom:$project-line-height;
+    text-align:center;
+
+    &:before{
+        top:10px;
+    }
+    &:after{
+        top:12px;
+    }
+}
+.side-title__inner{
+    display:inline-block;
+    background:#fff;
+    padding:0 10px;
+    line-height:1.2;
+    @include font-size(18px);
+    color:$primary-text-color;
+    text-transform:uppercase;
+    font-weight:600;
+}

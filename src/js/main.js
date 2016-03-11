@@ -5,6 +5,7 @@
 // Слайдер на главной
 // Степперы (кол-во товаров)
 // Стилизация Select (сортировка товаров в каталоге)
+// Слайдер (фильтр) цен в каталоге
 // Кнопка скролла страницы
 
 jQuery(document).ready(function ($) {
@@ -138,11 +139,65 @@ jQuery(document).ready(function ($) {
         var $sorter = $('.js-sorter');
         $sorter.selectric({
             disableOnMobile: false,
-            openOnHover: true,
+            //openOnHover: true,
             responsive: true
         });
     }
-    if ($('.js-sorter').length) { initSorter();}
+    if ($('.js-sorter').length) { initSorter(); }
+
+    //
+    // Слайдер (фильтр) цен в каталоге
+    //---------------------------------------------------------------------------------------
+    function initPriceSlider() {
+        var $slider = document.getElementById('priceslider'),
+            low_price = Math.floor($('#low_price').val()),
+            high_price = Math.floor($('#high_price').val());
+
+        noUiSlider.create($slider, {
+            start: [low_price, high_price],
+            step: 100,
+            connect: true,
+            range: {
+                'min': low_price,
+                'max': high_price
+            }
+        });
+
+        var $low_price = document.getElementById('low_price'),
+            $high_price = document.getElementById('high_price');
+
+        $slider.noUiSlider.on('update', function (values, handle) {//меняем значения в полях ввода когда двигаем ползунки
+            var value = values[handle];
+
+            if (handle) {
+                $high_price.value = Math.floor(value);
+            } else {
+                $low_price.value = Math.floor(value);
+            }
+        });
+
+        $('.js-priceinput').keydown(function (e) { //разрешим вводить только цифры в поле
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                return;
+            }
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+        $low_price.addEventListener('change', function () {
+            $slider.noUiSlider.set([this.value, null]);
+        });
+
+        $high_price.addEventListener('change', function () {
+            $slider.noUiSlider.set([null, this.value]);
+        });
+    };
+    if ($('.js-priceslider').length && !$html.hasClass('lt-ie9')) {
+        initPriceSlider();
+    };
 
     //
     // Кнопка скролла страницы

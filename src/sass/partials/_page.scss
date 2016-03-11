@@ -1,5 +1,36 @@
 ﻿@import "../modules/_base.scss";
 
+/*Page Grid*/
+.page__grid{
+    margin:0 -15px;
+    @extend .g-clearfix;
+}
+
+.page__main,
+.page__side{
+    @extend .g-column;
+}
+
+@include media($desktop){
+    .page__main{
+        float:right;
+        width:2*(100%)/3;
+    }
+    .page__side{
+        width:(100%)/3;
+    }
+}
+
+@include media($large){
+    .page__main{
+        width:75%;
+    }
+    .page__side{
+        width:25%;
+    }
+}
+
+
 @import "page/_breadcrumbs.scss";
 @import "page/_title.scss";//заголовки
 @import "page/_service-list.scss";//список услуг

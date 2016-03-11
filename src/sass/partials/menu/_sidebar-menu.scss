@@ -1,0 +1,31 @@
+﻿@import "../../modules/_base.scss";
+/*Sidebar Menu*/
+.s-menu{
+    list-style-type:none;
+    padding:0;
+    margin:0 -15px;
+    line-height:1;
+}
+.s-menu__item{
+    @include font-size(16px);
+}
+.s-menu__link{
+    display:block;
+    padding:10px 15px;
+    line-height:1.16;
+    color:$text-color;
+
+    &:hover,
+    &:active,
+    &:focus{
+        color:$primary-text-color;
+        background:#fff7f9;
+    }
+
+    &.current{
+        cursor:default;
+        text-decoration:none;
+        color:#fff;
+        background:$primary;
+    }
+}

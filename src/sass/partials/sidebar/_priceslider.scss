@@ -1,0 +1,44 @@
+﻿@import "../../modules/_base.scss";
+/*Priceslider on Sidebar Filter*/
+.b-priceslider{
+    max-width:270px;
+    margin-bottom:30px;
+}
+.b-priceslider__inner{
+    margin-bottom:20px;
+}
+.b-priceslider__label{
+    display:inline-block;
+    vertical-align:middle;
+    margin:0;
+    color:#887f80;
+    font-weight:400;
+    @include font-size(14px);
+}
+.b-priceslider__input{
+    display:inline-block;
+    vertical-align:middle;
+    padding:0 10px;
+    margin:0 4px;
+    height:28px;
+    width:70px;
+    border:1px solid $border-color;
+    border-radius:2px;
+    color:#535353;
+    text-align:center;
+    @include font-size(16px);
+    font-weight:600;
+
+    &:hover,
+    &:active,
+    &:focus{
+        border-color:$primary;
+        outline:0;
+    }
+}
+.b-priceslider__btn{
+    @extend .g-btn;
+    @extend .g-btn--alt;
+    width:100%;
+    margin:0;
+}

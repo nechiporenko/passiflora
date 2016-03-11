@@ -21,7 +21,7 @@
     border-radius:$border-radius;
     border: 1px solid $primary-alt;
     cursor: pointer;
-    @include transition(transform .15s ease);
+    @include transition(all .15s ease);
 
     &:hover,
     &:focus,
@@ -59,5 +59,24 @@
     &:active,
     &:focus{
         outline:0;
+    }
+}
+
+
+.g-btn--alt{
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:active,
+    &:focus{
+        background-color: $primary-text-color;
+        border-color: $primary-text-color;
+    }
+
+    &:disabled,
+    &.disabled{
+        color:$primary;
+        border-color:$primary;
     }
 }
