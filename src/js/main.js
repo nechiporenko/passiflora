@@ -3,6 +3,8 @@
 // Десктоп меню (выпадайки)
 // Мобильное меню
 // Слайдер на главной
+// Степперы (кол-во товаров)
+// Стилизация Select (сортировка товаров в каталоге)
 // Кнопка скролла страницы
 
 jQuery(document).ready(function ($) {
@@ -128,6 +130,19 @@ jQuery(document).ready(function ($) {
         verticalupclass: 'glyphicon glyphicon-triangle-top',
         verticaldownclass: 'glyphicon glyphicon-triangle-bottom'
     });
+
+    //
+    // Стилизация Select (сортировка товаров в каталоге)
+    //---------------------------------------------------------------------------------------
+    function initSorter() {
+        var $sorter = $('.js-sorter');
+        $sorter.selectric({
+            disableOnMobile: false,
+            openOnHover: true,
+            responsive: true
+        });
+    }
+    if ($('.js-sorter').length) { initSorter();}
 
     //
     // Кнопка скролла страницы

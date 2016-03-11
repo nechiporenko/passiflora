@@ -82,15 +82,17 @@
     color:#fff;
     text-decoration:none;
 
-    &.current{
-        color:$primary-text-color;
-    }
+    
 
     &:hover,
     &:active,
     &:focus{
         text-decoration:none;
         color:$primary;
+    }
+
+    &.current{
+        color:$primary-text-color;
     }
 }
 
