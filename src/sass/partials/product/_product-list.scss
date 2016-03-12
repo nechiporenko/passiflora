@@ -82,14 +82,18 @@
     &:before{
         content:'';
         display:block;
-        width:214px;
-        height:24px;
+        width:176px;
+        height:23px;
         position:absolute;
         left:50%;
         top:-16px;
-        margin-left:-112px;
+        margin-left:-88px;
         border-bottom:4px solid #fff;
         background:url(../img/sprite.png) 0 -340px no-repeat;
+    }
+
+    @include media($small){//когда 2 колонки - сделаем блоки шире но сохраним отступы между ними
+        max-width:400px;
     }
 }
 
@@ -259,6 +263,21 @@
             border-top-color:#fff;
         }
     }
+}
+
+/*Show More Products button*/
+.products-more{
+    margin:-60px 0 60px;
+    text-align:center;
+
+    @include media($desktop){
+        margin-bottom:30px;
+    }
+}
+.products-more__btn{
+    @extend .g-btn;
+    @extend .g-btn--alt;
+    margin:0;
 }
 
 
