@@ -2,13 +2,19 @@
 /*Advantages Section*/
 .b-advantages{
     padding:52px 0;
-    margin:75px 0;
+    max-width:370px;
+    margin:75px auto;
     border:1px solid #eee;
     border-radius:$border-radius;
     box-shadow:0 5px 1px rgba($primary, .6), inset 0 0 1px rgba(#000, .2);
     position:relative;
     color:$text-color-light;
     background:#fff url(../img/decor.png) center bottom no-repeat;
+
+    @include media($desktop){
+        max-width:none;
+        margin:75px 0;
+    }
 }
 
 .b-advantages__row{

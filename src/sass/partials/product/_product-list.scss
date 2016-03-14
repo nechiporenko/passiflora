@@ -43,11 +43,14 @@
 
 .product-list--3col{//3 колонки на десктопе - для страницы с сайдбаром
     .product-list__item{
+        @include media($small){//на этом разрешении, слева покажем сайдбар с фильтрами
+            width:100%;
+            &:nth-child(2n+1){
+                clear:none;
+            }
+        }
         @include media($desktop){
             width:50%;
-            &:nth-child(2n+1){
-                clear:left;
-            }
             &:nth-child(3n+1){
                 clear:none;
             }
@@ -70,7 +73,7 @@
 }
 
 .product-list__inner{
-    max-width:270px;
+    max-width:370px;
     margin:0 auto;
     padding:10px 25px 20px;
     border:1px solid #eee;
@@ -90,10 +93,6 @@
         margin-left:-88px;
         border-bottom:4px solid #fff;
         background:url(../img/sprite.png) 0 -340px no-repeat;
-    }
-
-    @include media($small){//когда 2 колонки - сделаем блоки шире но сохраним отступы между ними
-        max-width:400px;
     }
 }
 
