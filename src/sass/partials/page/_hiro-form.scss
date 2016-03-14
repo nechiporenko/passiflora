@@ -1,0 +1,103 @@
+﻿@import "../../modules/_base.scss";
+/*Catalog titel width form*/
+$hiro-form-bg:#72aab6;
+.b-hiro{
+    margin-bottom:30px;
+    border:1px solid $border-color;
+    border-radius:$border-radius;
+    background:$hiro-form-bg;
+    color:#fff;
+    overflow:hidden;
+}
+
+.b-hiro__inner,
+.b-hiro__form{
+    float:left;
+    width:100%;
+    padding:15px 20px;
+    height:180px;
+    position:relative;
+
+    @include media($tablet){
+        width:50%;
+    }
+}
+
+.b-hiro__inner{
+    background-color:$primary;
+    background-position:left top;
+    background-repeat:no-repeat;
+    z-index:1;
+
+    &:after{
+        content:'';
+        display:block;
+        position:absolute;
+        top:0; right:0; bottom:0; left:0;
+        background:rgba($primary,.2);
+        z-index:-1;
+    }
+}
+
+@include media($large){
+    .b-hiro__inner{
+        width:69%;
+    }
+    .b-hiro__form{
+        width:31%;
+    }
+}
+
+.b-hiro__title{
+    display:block;
+    margin:0;
+    @include font-size(28px);
+    font-weight:700;
+    color:#fff;
+    text-shadow:2px 2px 6px rgba(#000, .5);
+    text-transform:uppercase;
+    line-height:1.1;
+    position:absolute;
+    top:50%;
+    left:20px;
+    @include transform(translateY(-50%));
+
+    @include media($large){
+        @include font-size(48px);
+    }
+}
+
+.no-csstransforms{
+    .b-hiro__title{
+        position:static;
+    }
+}
+
+
+.b-hiro__form{
+    padding-top:20px;
+    background:$hiro-form-bg;
+
+    &:before{
+        content:'';
+        display:block;
+        height:180px;
+        width:25px;
+        background-image:url(../img/sprite.png);
+        background-repeat:no-repeat;
+        background-position:0 -480px;
+        position:absolute;
+        left:-23px;
+        top:0;
+        z-index:2;
+    }
+}
+.b-hiro__btn{
+    @extend .g-btn;
+    margin:0;
+
+    @include media($large){
+        width:100%;
+    }
+}
+

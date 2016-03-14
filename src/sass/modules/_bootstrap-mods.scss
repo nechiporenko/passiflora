@@ -7,6 +7,14 @@
 }
 
 
+a{
+    color:$text-color;
+
+    &:hover{
+        color:$primary-text-color;
+    }
+}
+
 .dropdown-menu{
     border-radius:$border-radius;
     padding-top:15px;

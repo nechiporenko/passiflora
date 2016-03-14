@@ -11,19 +11,10 @@
     @extend .g-column;
 }
 
-@include media($small){
-    .page__main{
-        float:right;
-        width:50%;
-    }
-    .page__side{
-        width:50%;
-    }
-}
 
 @include media($desktop){
     .page__main{
-        //float:right;
+        float:right;
         width:2*(100%)/3;
     }
     .page__side{
@@ -47,6 +38,7 @@
 @import "page/_advantages.scss";//преимущества
 @import "page/_news-list.scss";//последние новости (колонки)
 @import "page/_seo.scss";//SEO-блок
+@import "page/_hiro-form.scss";//Заголовок с формой заявки
 @import "page/_slider.scss";
 
 @import "page/_scroll-up.scss";
