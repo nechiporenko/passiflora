@@ -46,4 +46,26 @@
 }
 
 
+/*for .g-input size:*/
+.touchspin-theme-size{
+    .bootstrap-touchspin .input-group-btn-vertical>.btn {
+        @include px2rem(padding, 9.5px 10px);
+        border-color:$border-color;
+    }
+    .input-group-btn-vertical .bootstrap-touchspin-up{
+        border-top-right-radius:2px;
+        border-bottom-color:#fff !important;
+    }
+    .input-group-btn-vertical .bootstrap-touchspin-down{
+        border-bottom-right-radius:2px;
+        border-top-color:#fff !important;
+    }
+
+    .js-stepper{
+        border-top-left-radius:2px !important;
+        border-bottom-left-radius:2px !important;
+    }
+}
+
+
 

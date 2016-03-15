@@ -173,8 +173,28 @@
     }
 
     .b-rating{
+        width:116px;
+        background-color:#fff;
         position:relative;
         z-index:1;
+    }
+    .b-rating--5{
+        background-position:4px -240px;
+    }
+
+    .b-rating--4{
+        background-position:4px -260px;
+    }
+    .b-rating--3{
+        background-position:4px -280px;
+    }
+
+    .b-rating--2{
+        background-position:4px -300px;
+    }
+
+    .b-rating--1{
+        background-position:4px -320px;
     }
 }
 
@@ -246,7 +266,6 @@
         width:60px;
 
         .input-group-btn-vertical>.btn{
-            padding:6.5px 10px;
             @include px2rem(padding, 6.5px 10px);
             border-color:$border-color;
         }

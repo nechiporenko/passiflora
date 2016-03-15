@@ -232,15 +232,17 @@ jQuery(document).ready(function ($) {
     //
     // Стилизация Select (сортировка товаров в каталоге)
     //---------------------------------------------------------------------------------------
-    function initSorter() {
-        var $sorter = $('.js-sorter');
-        $sorter.selectric({
-            disableOnMobile: false,
-            //openOnHover: true,
-            responsive: true
+    function stylingSelect() {
+        var $select = $('.js-select');
+        $select.each(function () {
+            $(this).selectric({
+                disableOnMobile: false,
+                //openOnHover: true,
+                responsive: true
+            });
         });
     }
-    if ($('.js-sorter').length) { initSorter(); }
+    if ($('.js-select').length) { stylingSelect(); }
 
     //
     // Слайдер (фильтр) цен в каталоге

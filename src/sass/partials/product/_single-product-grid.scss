@@ -1,0 +1,37 @@
+﻿@import "../../modules/_base.scss";
+/*Product Page Grid*/
+.b-gallery,
+.b-product,
+.b-addon{
+    @extend .g-column;
+}
+
+@include media($tablet){
+    .b-gallery{
+        width:5*(100%)/12;
+    }
+    .b-product{
+        width:7*(100%)/12;
+    }
+}
+
+@include media($desktop){
+    .b-gallery{
+        width:5*(100%)/12;
+    }
+    .b-product{
+        width:7*(100%)/12;
+    }
+}
+
+@include media($large){
+    .b-gallery{
+        width:5*(100%)/12;
+    }
+    .b-product{
+        width:4*(100%)/12;
+    }
+    .b-addon{
+        width:3*(100%)/12;
+    }
+}

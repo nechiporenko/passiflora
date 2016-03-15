@@ -95,6 +95,12 @@
       "css": "cancel",
       "code": 59406,
       "src": "mfglabs"
+    },
+    {
+      "uid": "dcedf50ab1ede3283d7a6c70e2fe32f3",
+      "css": "chat",
+      "code": 59407,
+      "src": "fontawesome"
     }
   ]
 }
