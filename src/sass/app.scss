@@ -10,6 +10,7 @@
 //@import "modules/grid";
 @import "modules/button";
 @import "modules/forms";
+@import "modules/modal";//оверлей
 //@import "modules/tables";
 
 //typography
@@ -23,8 +24,6 @@
 @import "partials/sidebar";
 @import "partials/footer";
 
-//other parts
-@import "modules/modal";//оверлей
 
 //plugins vendors
 @import "vendor/vendor";

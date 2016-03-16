@@ -1,2 +1,74 @@
 ﻿@import "../../modules/_base.scss";
 /*Product Page Gallery*/
+.b-gallery{
+    margin-bottom:20px;
+}
+.b-gallery__thumb{
+    max-width:470px;
+    margin-bottom:15px;
+    border:1px solid #eee;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:100%;
+    }
+}
+.b-gallery__link{
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    cursor:crosshair;
+}
+
+.b-gallery__img{
+    @extend .g-img-centered;
+}
+
+
+.b-gallery__list{
+    @extend .g-clearfix;
+    max-width:473px;
+    list-style-type:none;
+    padding:0;
+    margin:0 -3px;
+}
+.b-gallery__item{
+    @extend .g-column;
+    padding:0 3px;
+    margin-bottom:6px;
+    width:(100%)/5;
+}
+
+
+.b-gallery__preview{
+    display:block;
+    position:relative;
+    background:#fff;
+    border:1px solid #eee;
+    border-radius:6px;
+    overflow:hidden;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:100%;
+    }
+
+    &:hover,
+    &:active{
+        border-color:$primary;
+    }
+
+    &.current{
+        border-color:$primary-text-color;
+        cursor:default;
+    }
+}
+
+.b-gallery__preview-img{
+    @extend .g-img-centered;
+}

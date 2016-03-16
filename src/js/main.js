@@ -8,6 +8,7 @@
 // Слайдер (фильтр) цен в каталоге
 // Выбор цвета (чекбокс colorbox)
 // Маска для телефонного номера
+// Галерея в карточке товара
 // Кнопка скролла страницы
 
 jQuery(document).ready(function ($) {
@@ -22,7 +23,7 @@ jQuery(document).ready(function ($) {
     //
     // Десктоп меню (выпадайки)
     //---------------------------------------------------------------------------------------
-    var initDesktopMenu = (function () {
+    (function () {
         var $menu = $('.js-menu');
 
         $menu.find('li').has('ul').addClass('has-menu');
@@ -36,13 +37,13 @@ jQuery(document).ready(function ($) {
                 $(this).removeClass('hover').find('ul').stop(true, true).fadeOut('slow');
                 $(this).find('a:first').removeClass('hover');
             }
-        })
+        });
     })();
 
     //
     // Мобильное меню
     //---------------------------------------------------------------------------------------
-    function initMobileMenu() {
+    (function () {
         var $btn = $('.js-mtoggle'),
             $menu = $('.js-mmenu'),
             $submenu = $menu.find('.m-submenu'),
@@ -98,8 +99,7 @@ jQuery(document).ready(function ($) {
                 $el.addClass('active').parent('li').find('ul').slideDown();
             }
         });
-    }
-    initMobileMenu();
+    })();
 
 
     //
@@ -248,6 +248,71 @@ jQuery(document).ready(function ($) {
     // Маска для телефонного номера
     //---------------------------------------------------------------------------------------
     $('.js-phone').mask('+380 99 999-99-99');
+
+    //
+    // Галерея в карточке товара
+    //---------------------------------------------------------------------------------------
+    function initGallery() {
+        var method = {},
+            $zoom = $('.js-zoom'), //блок Превью
+            $gallery = $('.js-gallery'), //галерея с мелкими картинками
+            isZoomActive = false; //флаг состояния zoom
+
+        method.initZoom = function () {
+            var target = $zoom.attr('href');
+            $zoom.zoom({
+                url: target
+            });
+            isZoomActive = true;
+        }
+
+        method.destroyZoom = function () {
+            $zoom.trigger('zoom.destroy');
+            isZoomActive = false;
+        }
+
+        method.reloadZoom = function (md, xl) {
+            if (isZoomActive) {
+                method.destroyZoom();
+            };
+            $zoom.attr('href', xl).children('img').attr('src', md);
+            if (!isZoomActive) {
+                method.initZoom();
+            }
+        }
+
+        method.initGallery = function () {
+            var $current = $gallery.find('li').eq(0).children('a'),
+                md = $current.attr('href'),
+                xl = $current.data('img');
+            method.reloadZoom(md, xl);
+            $current.addClass('current');
+        }
+
+        method.changeImage = function (el) {
+            if (el.hasClass('current')) {
+                return false;
+            } else {
+                $gallery.find('a').removeClass('current');
+                var md = el.attr('href'),
+                    xl = el.data('img');
+                method.reloadZoom(md, xl);
+                el.addClass('current');
+            }
+        }
+
+        method.initGallery();
+
+        $('.js-gallery').on('click', 'a', function (e) {//меняем картинку по клику на превьюшку и перегружаем зум
+            e.preventDefault();
+            method.changeImage($(this));
+        });
+
+        $zoom.on('click', function (e) {//запрещаем клик (возможно, в дальнейшем потребуется прикрутить к галерее лайтбокс...)
+            e.preventDefault();
+        });
+    }
+    if ($('.js-zoom').length) { initGallery() }
 
     //
     // Кнопка скролла страницы

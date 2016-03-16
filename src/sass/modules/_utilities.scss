@@ -1,18 +1,6 @@
 ﻿@import "base";
 
 /* Utilities */
-img.g-full-width{clear:both;display:block;width:100%;height:auto;margin:0 0 0 0;}
-.g-img-left{
-    float:left;
-    @include px2rem(margin, 0 20px 9px 0);
-    @extend .g-max-full-width;
-}
-.g-img-right{
-    float:right;
-    @include px2rem(margin, 0 0 20px 9px);
-    @extend .g-max-full-width;
-}
-
 .g-full-width {
   width: 100%;
   box-sizing: border-box;
