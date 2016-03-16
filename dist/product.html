@@ -315,55 +315,117 @@
             </ol>
             <!--/BREADCRUMBS END-->
 
-            <h1 class="g-title">
-                Тепло твоих рук
-            </h1>
+            <div itemscope itemtype="http://schema.org/Product">
+
+                <h1 class="g-title" itemprop="name">
+                    Тепло твоих рук
+                </h1>
+
+                <!--PRODUCT ROW START-->
+                <div class="row">
+                    <!--PRODUCT GALLERY START-->
+                    <div class="b-gallery">
+                        1
+                    </div>
+                    <!--/PRODUCT GALLERY END-->
+
+                    <!--PRODUCT INFO START-->
+                    <div class="b-product">
+                        <div class="b-product__intro">
+                            <div class="b-rating b-rating--4" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                                <span class="b-rating__inner">
+                                    <span itemprop="ratingValue">4</span>
+                                    <span itemprop="reviewCount">22</span>
+                                </span>
+                            </div>
+                            <span class="b-product__review">
+                                <i class="icon-chat"></i> 22 отзыва
+                            </span>
+                            <span class="b-product__id">Арт:<span>243</span></span>
+                        </div>
+
+                        <div class="b-product__action">
+                            <div class="b-product__col">
+                                <label class="b-product__label">Объем букета:</label>
+                                <select class="b-product__select js-select">
+                                    <option value="1">Стандарт</option>
+                                    <option value="2">Средний</option>
+                                    <option value="3">Большой</option>
+                                    <option value="4" selected>Очень большой</option>
+                                </select>
+                            </div>
+                            <div class="b-product__col b-product__count">
+                                <label class="b-product__label">Кол-во:</label>
+                                <input type="text" class="b-product__input js-stepper" value="1" />
+                            </div>
+                        </div>
+
+                        <!--PRODUCT PRICE START-->
+                        <div class="b-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                            <span class="b-price__item b-price__item--old">2699 грн</span>
+                            <span class="b-price__item" itemprop="price" content="2799.00">
+                                2 799 <span class="b-price__curr" itemprop="priceCurrency" content="UAH">грн</span>
+                            </span>
+                        </div>
+                        <!--/PRODUCT PRICE END-->
+
+                        <div class="b-product__action">
+                            <div class="b-product__col">
+                                <button type="button" class="b-product__btn">
+                                    <span class="b-product__icon"></span>
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                            <div class="b-product__col">
+                                <button type="button" class="b-product__btn b-product__btn--alt">
+                                    Заказать<br />
+                                    в 1 клик
+                                </button>
+                            </div>
+                        </div>
+
+                        <!--PRODUCT DESCRIPTION START-->
+                        <div class="b-product__description" itemprop="description">
+                            <dl class="b-product__definition">
+                                <dt>Размер:</dt>
+                                <dd>высота 50 см, диаметр 25 см</dd>
+                                <dt>Состав:</dt>
+                                <dd>Гиацинт, Тюльпан, Хвоя</dd>
+                            </dl>
+
+                            <p>Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.</p>
+                            <p><em>30% букета может быть заменено без изменения общего вида и стиля букета.</em></p>
+                        </div>
+                        <!--/PRODUCT DESCRIPTION END-->
+
+                        <!--SHARE THIS BLOCK START-->
+                        <ul class="b-sharethis">
+                            <li class="b-sharethis__item">Поделиться:</li>
+                            <li class="b-sharethis__item">
+                                <a href="#" class="b-sharethis__link"><i class="icon-vkontakte"></i></a>
+                            </li>
+                            <li class="b-sharethis__item">
+                                <a href="#" class="b-sharethis__link"><i class="icon-facebook"></i></a>
+                            </li>
+                            <li class="b-sharethis__item">
+                                <a href="#" class="b-sharethis__link"><i class="icon-instagramm"></i></a>
+                            </li>
+                            <li class="b-sharethis__item">
+                                <a href="#" class="b-sharethis__link"><i class="icon-gplus"></i></a>
+                            </li>
+                        </ul>
+                        <!--/SHARE THIS BLOCK END-->
+                    </div>
+                    <!--/PRODUCT INFO END-->
+                    <!--PRODUCT ADDITIONAL INFO START-->
+                    <div class="b-addon">
+                        3
+                    </div>
+                    <!--/PRODUCT ADDITIONAL INFO END-->
+                </div>
+                <!--/PRODUCT ROW END-->
+            </div><!--/shema.org Product end-->
             
-            <!--PRODUCT ROW START-->
-            <div class="row">
-                <!--PRODUCT GALLERY START-->
-                <div class="b-gallery">
-                    1
-                </div>
-                <!--/PRODUCT GALLERY END-->
-
-                <!--PRODUCT DESCRIPTION START-->
-                <div class="b-product">
-                    <div class="b-product__intro">
-                        <div class="b-rating b-rating--4">
-                            <span class="b-rating__inner">4</span>
-                        </div>
-                        <span class="b-product__review">
-                            <i class="icon-chat"></i> 22 отзывы
-                        </span>
-                        <span class="b-product__id">Арт:<span>243</span></span>
-                    </div>
-
-                    <div class="b-product__action">
-                        <div class="b-product__type">
-                            <label class="b-product__label">Объем букета:</label>
-                            <select class="b-product__select js-select">
-                                <option value="1">Стандарт</option>
-                                <option value="2">Средний</option>
-                                <option value="3">Большой</option>
-                                <option value="4" selected>Очень большой</option>
-                            </select>
-                        </div>
-                        <div class="b-product__count">
-                            <label class="b-product__label">Кол-во:</label>
-                            <input type="text" class="b-product__input js-stepper" value="1" />
-                        </div>
-                    </div>
-                </div>
-                <!--/PRODUCT DESCRIPTION END-->
-
-                <!--PRODUCT ADDITIONAL INFO START-->
-                <div class="b-addon">
-                    3
-                </div>
-                <!--/PRODUCT ADDITIONAL INFO END-->
-            </div>
-            <!--/PRODUCT ROW END-->
         </div><!--/container-->
     </main>
     <!--/MAIN SECTION END-->
