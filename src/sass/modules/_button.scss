@@ -80,3 +80,10 @@
         border-color:$primary;
     }
 }
+
+.g-btn--large{
+    @include px2rem(height, 48px);
+    @include px2rem(padding, 0 12px);
+    @include px2rem(line-height, 47px);
+    @include font-size(15px);
+}

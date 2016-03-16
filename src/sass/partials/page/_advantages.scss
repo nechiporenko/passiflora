@@ -17,7 +17,6 @@
     }
 
     @include media($extra-large){
-        position:relative;
         box-shadow:0 5px 1px rgba($primary, .6);
 
         &:before{

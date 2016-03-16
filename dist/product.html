@@ -315,7 +315,7 @@
             </ol>
             <!--/BREADCRUMBS END-->
 
-            <div itemscope itemtype="http://schema.org/Product">
+            <section itemscope itemtype="http://schema.org/Product">
 
                 <h1 class="g-title" itemprop="name">
                     Тепло твоих рук
@@ -341,7 +341,9 @@
                             <span class="b-product__review">
                                 <i class="icon-chat"></i> 22 отзыва
                             </span>
-                            <span class="b-product__id">Арт:<span>243</span></span>
+                            <span class="b-product__id">
+                                Арт:<span itemprop="productID">243</span>
+                            </span>
                         </div>
 
                         <div class="b-product__action">
@@ -417,14 +419,87 @@
                         <!--/SHARE THIS BLOCK END-->
                     </div>
                     <!--/PRODUCT INFO END-->
+
                     <!--PRODUCT ADDITIONAL INFO START-->
                     <div class="b-addon">
-                        3
+                        <div class="side-panel">
+                            <div class="side-title">
+                                <span class="side-title__inner">Доставка</span>
+                            </div>
+                            <p><strong>Бесплатная</strong> по Киеву на сумму больше 600 грн.</p>
+                            <p>60 грн. - по Киеву при заказе на сумму меньше 600 грн.</p>
+                            <p>Доставка Новой Почтой по Украине (по тарифу перевозчика)</p>
+                            <p>Самовывоз из пункта выдачи заказов м. Льва Толстого - бесплатно</p>
+                            <p>Доставка в пригород (стоимость уточняйте у менеджера)</p>
+
+                            <div class="side-title">
+                                <span class="side-title__inner">Оплата</span>
+                            </div>
+                            <p>Безналичный расчет/Приват24</p>
+                            <p>Наличными курьеру по Киеву</p>
+                            <hr />
+                            <p><em>Минимальная сумма заказа 150 грн. Заказы менее 150 грн. в обработку попадать не будут</em></p>
+                            <em>Заказы от 200 шт. обрабатываются по телефону</em>
+                        </div>
                     </div>
                     <!--/PRODUCT ADDITIONAL INFO END-->
                 </div>
                 <!--/PRODUCT ROW END-->
-            </div><!--/shema.org Product end-->
+
+                <!--PRODUCT REVIEW START-->
+                <div class="b-review">
+                    <span class="b-review__title">Отзывы</span>
+
+                    <div class="b-review__item" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                        <div class="b-rating b-rating--5" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                            <div class="b-rating__inner">
+                                <span itemprop="worstRating">1</span>
+                                <span itemprop="ratingValue">5</span>
+                                <span itemprop="bestRating">5</span>
+                            </div>
+                        </div>
+
+                        <div class="b-review__author">
+                            <span class="b-rating__name" itemprop="author">Петр Иванов</span>
+                            <meta itemprop="datePublished" content="2015-03-12" />
+                            <span class="b-review__date">12.03.2015</span>
+                        </div>
+
+                        <div class="b-review__content" itemprop="description">
+                            <p>Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
+                        </div>
+                    </div><!--/b-review__item-->
+
+                    <div class="b-review__item" itemprop="review" itemscope itemtype="http://schema.org/Review">
+                        <div class="b-rating b-rating--4" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                            <div class="b-rating__inner">
+                                <span itemprop="worstRating">1</span>
+                                <span itemprop="ratingValue">4</span>
+                                <span itemprop="bestRating">5</span>
+                            </div>
+                        </div>
+
+                        <div class="b-review__author">
+                            <span class="b-rating__name" itemprop="author">Тамара</span>
+                            <meta itemprop="datePublished" content="2015-03-12" />
+                            <span class="b-review__date">12.03.2015</span>
+                        </div>
+
+                        <div class="b-review__content" itemprop="description">
+                            <p>Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
+                        </div>
+                    </div><!--/b-review__item-->
+
+                    <p class="text-right">
+                        <a href="news.html" class="g-text-color-link">Все отзывы <i class="icon-right-open-big"></i></a>
+                    </p>
+
+                    <div class="text-center">
+                        <button type="button" class="g-btn g-btn--large">Написать свой отзыв</button>
+                    </div>
+                </div>
+                <!--/PRODUCT REVIEW END-->
+            </section><!--/shema.org Product end-->
             
         </div><!--/container-->
     </main>

@@ -126,13 +126,6 @@ ol{
     @include px2rem(margin-bottom, $project-line-height);
 }
 
-/* Misc */
-hr {
-    @include px2rem(margin, $project-line-height 0);
-    border-width: 0;
-    border-top: 1px solid $border-color;
-}
-
 /* Transitions */
 a, button, input[type="button"], input[type="submit"],
 #{$all-text-inputs}, select{

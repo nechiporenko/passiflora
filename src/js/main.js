@@ -129,6 +129,7 @@ jQuery(document).ready(function ($) {
     $('.js-stepper').TouchSpin({
         verticalbuttons: true,
         min: 1,
+        max: 9999,
         step: 1,
         verticalupclass: 'glyphicon glyphicon-triangle-top',
         verticaldownclass: 'glyphicon glyphicon-triangle-bottom'

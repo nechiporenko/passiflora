@@ -7,7 +7,7 @@
 
 .b-product__intro{
     @extend .g-clearfix;
-    padding-bottom:10px;
+    padding:10px 0;
     margin-bottom:10px;
     border-bottom:1px solid #eee;
 
@@ -90,7 +90,7 @@
     font-weight:700;
 
     @include media($desktop){
-        width:50px !important;
+        width:60px !important;
         float:right !important;
     }
 }
