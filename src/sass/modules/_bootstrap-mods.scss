@@ -15,6 +15,10 @@ a{
     }
 }
 
+.modal-header .close{
+    outline:none;
+}
+
 .dropdown-menu{
     border-radius:$border-radius;
     padding-top:15px;

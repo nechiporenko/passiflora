@@ -411,7 +411,7 @@
                                 </button>
                             </div>
                             <div class="b-product__col">
-                                <button type="button" class="b-product__btn b-product__btn--alt">
+                                <button type="button" class="b-product__btn b-product__btn--alt" data-toggle="modal" data-target="#order">
                                     Заказать<br />
                                     в 1 клик
                                 </button>
@@ -527,7 +527,7 @@
                     </p>
 
                     <div class="text-center">
-                        <button type="button" class="g-btn g-btn--large">Написать свой отзыв</button>
+                        <button type="button" class="g-btn g-btn--large" data-toggle="modal" data-target="#review">Написать свой отзыв</button>
                     </div>
                 </div>
                 <!--/PRODUCT REVIEW END-->
@@ -536,6 +536,125 @@
         </div><!--/container-->
     </main>
     <!--/MAIN SECTION END-->
+
+    <!--MODAL WINDOWS START-->
+    <div class="modal" tabindex="-2" role="dialog" id="order">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <span class="g-title">Заказать в 1 клик</span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <p>Укажите свой номер телефона, и мы свяжемся с вами в течение 10 минут</p>
+                        <label class="g-label">Ваш телефон</label>
+                        <input type="text" class="g-input js-phone" required />
+                        <button type="submit" class="g-btn g-btn--alt">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="review">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <span class="g-title">Оставить отзыв</span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label class="g-label">Ваше имя</label>
+                        <input type="text" class="g-input" required />
+                        <label class="g-label">Оцените товар:</label>
+                        <ul class="list-unstyled">
+                            <li>
+                                <label>
+                                    <input type="radio" name="r" value="5" checked />
+                                    &emsp;
+                                    <span class="g-brand-color">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                    </span>
+                                    &emsp;
+                                    Отлично
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="r" value="4" />
+                                    &emsp;
+                                    <span class="g-brand-color">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </span>
+                                    &emsp;
+                                    Хорошо
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="r" value="3" />
+                                    &emsp;
+                                    <span class="g-brand-color">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </span>
+                                    &emsp;
+                                    Средне
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="r" value="2" />
+                                    &emsp;
+                                    <span class="g-brand-color">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </span>
+                                    &emsp;
+                                    Плохо
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="r" value="1" />
+                                    &emsp;
+                                    <span class="g-brand-color">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </span>
+                                    &emsp;
+                                    Ужасно
+                                </label>
+                            </li>
+                        </ul>
+                        <label class="g-label">Отзыв</label>
+                        <textarea class="g-textarea" required></textarea>
+                        <button type="submit" class="g-btn g-btn--alt">Отправить</button>
+                    </form>
+                </div>
+            </div><!-- /modal-content -->
+        </div><!-- /modal-dialog -->
+    </div><!-- /modal -->
+    <!--/MODAL WINDOWS END-->
 
     <!--MOBILE MENU START-->
     <nav class="m-nav js-mmenu">
@@ -752,7 +871,7 @@
         </div>
     </footer>
     <!--/FOOTER END-->
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="js/vendor/bootstrap.min.js"></script>
