@@ -21,6 +21,27 @@
     vertical-align:middle;
     text-align:center;
 }
+
+.g-img-left{
+    display:block;
+    margin-bottom:10px;
+
+    @include media($small){
+        float:left;
+        margin:0 10px 5px 0;
+    }
+}
+
+.g-img-right{
+    display:block;
+    margin-bottom:10px;
+
+    @include media($small){
+        float:right;
+        margin:0 0 5px 10px;
+    }
+}
+
 .g-img-centered{
     @include img-centered;
 }
