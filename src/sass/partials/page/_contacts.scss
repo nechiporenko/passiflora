@@ -1,0 +1,62 @@
+﻿@import "../../modules/_base.scss";
+/*Contacts page*/
+.b-map{
+    height:400px;
+    margin-bottom:30px;
+    background:#bbb;
+
+    @include media($large){
+        margin-bottom:70px;
+    }
+}
+
+.b-map__inner{
+    line-height: 1.2;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .g-subtitle{
+        margin-bottom:0;
+    }
+}
+
+.b-contacts{
+    max-width:1030px;
+    margin:0 auto 30px;
+}
+
+.b-contacts__inner{
+    @extend .g-clearfix;
+    margin:0 -15px;
+}
+
+.b-contacts__column{
+    @extend .g-column;
+
+    @include media($tablet){
+        width:50%;
+    }
+
+    @include media($large){
+        &:first-child{
+            padding-right:30px;
+        }
+
+        &:last-child{
+            padding-left:30px;
+        }
+    }
+}
+
+.b-contacts__input{
+    @extend .g-input;
+    height:50px;
+    margin-bottom:30px;
+    @include font-size(16px);
+}
+
+.b-contacts__message{
+    @extend .g-textarea;
+    height:210px;
+    margin-bottom:20px;
+}
