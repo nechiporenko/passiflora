@@ -33,6 +33,7 @@ html{
     }
 }
 
+/* Typography*/
 .page__content{
     padding:15px 0 50px;
     min-height:500px;
@@ -46,9 +47,21 @@ html{
     @include font-size($project-font-size);
     line-height:1.86;
     color:$text-color-light;
+
+    .g-title--line{
+        margin-bottom:20px;
+    }
 }
 
-/* Typography*/
+.page__image{
+    display:block;
+    @extend .g-full-width;
+    margin-bottom:2*$project-line-height;
+    border:1px solid $border-color;
+    border-radius:10px;
+}
+
+
 .g-brand-color{
     color:$primary-text-color;
 }
