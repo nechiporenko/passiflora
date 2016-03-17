@@ -308,3 +308,13 @@
 }
 
 
+/*Short Product List*/
+.product-list--short{//для блоков каталога родительской страницы
+    .product-list__caption{
+        height:auto;
+        &:after{
+            display:none;
+        }
+    }
+}
+
