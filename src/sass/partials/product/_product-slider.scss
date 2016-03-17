@@ -1,0 +1,37 @@
+﻿@import "../../modules/_base.scss";
+/*Products Slider*/
+.js .product-slider{
+    margin-bottom:40px;
+
+    .bx-viewport{
+        padding-bottom:30px;
+    }
+
+    .product-list{
+        padding:20px 0 0 0;
+        margin:0;
+    }
+    .product-list__item{
+        margin-bottom:0;
+        width:25%;
+        padding:0;
+
+        @include media($small){
+            &:nth-child(2n+1){
+                clear:none;
+            }
+        }
+
+        @include media($desktop){
+            &:nth-child(3n+1){
+                clear:none;
+            }
+        }
+
+        @include media($large){
+            &:nth-child(4n+1){
+                clear:none;
+            }
+        }
+    }
+}

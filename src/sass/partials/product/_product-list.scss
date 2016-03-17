@@ -41,7 +41,7 @@
     }
 }
 
-.product-list--3col{//3 колонки на десктопе - для страницы с сайдбаром
+.product-list--3col{//3 колонки на десктопе - для страницы с сайдбаром (каталог)
     .product-list__item{
         @include media($desktop){
             width:50%;
@@ -70,7 +70,8 @@
 }
 
 .product-list__inner{
-    max-width:370px;
+    //max-width:370px;
+    max-width:270px;
     margin:0 auto;
     padding:10px 25px 20px;
     border:1px solid #eee;
@@ -79,7 +80,7 @@
     box-shadow:0 5px 1px rgba($primary, .6), inset 0 0 1px rgba(#000, .2);
     position:relative;
 
-    &:before{
+    &:before{//шапочка
         content:'';
         display:block;
         width:176px;
@@ -294,6 +295,16 @@
     @extend .g-btn;
     @extend .g-btn--alt;
     margin:0;
+}
+
+/*Product Badges*/
+.product-list__badge{
+    display:block;
+    @include px2rem(width, 107px);
+    @include px2rem(height, 107px);
+    position:absolute;
+    left:0;
+    @include px2rem(top, -13.5px);
 }
 
 
