@@ -1,0 +1,13 @@
+﻿@import "../../modules/_base.scss";
+/*Personal Cabinet*/
+.b-cabinet{
+    @extend .b-checkout__inner;
+}
+
+.b-cabinet__title{
+    @extend .side-title;
+}
+
+.b-cabinet__title-text{
+    @extend .side-title__inner;
+}

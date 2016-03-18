@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Checkout Page</title>
+    <title>Cabinet Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -106,7 +106,7 @@
                </div>
                <!--HEADER CART START-->
                <div class="h-cart dropdown">
-                   <button type="button" class="h-cart__btn dropdown-toogle" data-toggle="dropdown" disabled>
+                   <button type="button" class="h-cart__btn dropdown-toogle" data-toggle="dropdown">
                        <span class="h-cart__count">2</span>
                    </button>
                    <ul class="h-cart__inner dropdown-menu dropdown-menu-right">
@@ -290,7 +290,7 @@
     <!--/HEADER END-->
 
     <!--MAIN SECTION START-->
-    <section class="page__content">
+    <main class="page__content">
         <div class="container">
             <!--BREADCRUMBS START-->
             <ol class="breadcrumbs">
@@ -299,258 +299,76 @@
                         <span itemprop="title">Главная</span>
                     </a>
                 </li>
-                <li class="breadcrumbs__item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <a href="cart.html" class="breadcrumbs__link" itemprop="url">
-                        <span itemprop="title">Корзина</span>
-                    </a>
-                </li>
                 <li class="breadcrumbs__item">
-                    Оформление заказа
+                    Личный кабинет
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
             <h1 class="g-title g-title--line">
-                <span class="g-title__inner">Оформление заказа</span>
+                <span class="g-title__inner">Личный кабинет</span>
             </h1>
 
-            <!--CHECKOUT ROW START-->
-            <div class="row">
-                <!--CHECKOUT CART START-->
-                <aside class="b-checkout-cart">
-                    <div class="side-panel">
-                        <div class="side-title">
-                            <span class="side-title__inner">Корзина</span>
-                        </div>
-                        <table class="table b-checkout-cart__table">
-                            <tr>
-                                <td class="text-center">
-                                    <a href="product.html">
-                                        <img src="img/del/product01.jpg" class="b-checkout-cart__img" alt="Product" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="product.html" class="b-checkout-cart__title">Влюбленная пора</a>
-                                    1 шт
-                                </td>
-                                <td class="text-right">
-                                    <span class="b-checkout-cart__price">1 620 <span class="b-checkout-cart__curr">грн</span></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">
-                                    <a href="product.html">
-                                        <img src="img/del/product02.jpg" class="b-checkout-cart__img" alt="Product" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="product.html" class="b-checkout-cart__title">Влюбленная пора</a>
-                                    1 шт
-                                </td>
-                                <td class="text-right">
-                                    <span class="b-checkout-cart__price">650 <span class="b-checkout-cart__curr">грн</span></span>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <table class="b-checkout-cart__total">
-                            <tr>
-                                <td>Товаров на:</td>
-                                <td class="text-right">
-                                    <span class="b-checkout-cart__price">1 620 <span class="b-checkout-cart__curr">грн</span></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Доставка:</td>
-                                <td class="text-right">
-                                    <span class="b-checkout-cart__price">60 <span class="b-checkout-cart__curr">грн</span></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><b>К оплате:</b></td>
-                                <td class="text-right">
-                                    <span class="b-checkout-cart__price b-checkout-cart__price--total">2 330 <span class="b-checkout-cart__curr">грн</span></span>
-                                </td>
-                            </tr>
-                        </table>
+            <div class="b-cabinet">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="g-label">Название поля</label>
+                        <input type="text" class="g-input" />
                     </div>
-
-                    <div class="b-checkout-cart__prev">
-                        <a href="cart.html" class="b-checkout-cart__link">
-                            Изменить товары в корзине
-                        </a>
+                    <div class="col-md-4">
+                        <label class="g-label">Название поля</label>
+                        <input type="text" class="g-input" />
                     </div>
-                </aside>
-                <!--/CHECKOUT CART END-->
-                <!--CHECKOUT MAIN SECTION START-->
-                <main class="b-checkout">
-                    <div class="b-checkout__inner">
-                        <div class="b-checkout__title">
-                            <span class="b-checkout__title-text">Контактные данные</span>
-                        </div>
-
-                        <ul class="b-tab" role="tablist">
-                            <li role="presentation" class="b-tab__item active">
-                                <a href="#new-client" class="b-tab__link" role="tab" data-toggle="tab">Я новый покупатель</a>
-                            </li>
-                            <li role="presentation" class="b-tab__item">
-                                <a href="#login" class="b-tab__link" aria-controls="login" role="tab" data-toggle="tab">Я постоянный клиент</a>
-                            </li>
-                        </ul>
-
-                        <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="new-client">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="g-visuallyhidden">Имя</label>
-                                        <input type="text" class="g-input" placeholder="Имя" required />
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="g-visuallyhidden">Email</label>
-                                        <input type="email" class="g-input" placeholder="Электронная почта" required />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <span class="g-label-addon">Пришлем информацию при заказе</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="g-visuallyhidden">Телефон</label>
-                                        <input type="text" class="g-input js-phone" placeholder="Номер телефона" required />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <span class="g-label-addon">Для звонка при доставке</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label class="g-visuallyhidden">Город</label>
-                                        <input type="text" class="g-input" placeholder="Город" />
-                                    </div>
-                                </div>
-                            </div><!--/tabpanel-->
-                            <div role="tabpanel" class="tab-pane" id="login">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="g-visuallyhidden">Email</label>
-                                        <input type="email" class="g-input" placeholder="Электронный адрес" required />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <span class="g-label-addon">Указанный при регистрации</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label class="g-visuallyhidden">Пароль</label>
-                                        <input type="password" class="g-input" placeholder="Пароль" required />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <span class="g-label-addon">Забыли пароль? <a href="#">мы напомним</a></span>
-                                    </div>
-                                </div>
-                            </div><!--/tabpanel-->
-                        </div><!--/tab-content-->
-
-                        <div class="b-checkout__title">
-                            <span class="b-checkout__title-text">Способы доставки и оплаты</span>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-3 col-md-2">
-                                <label class="b-checkout__label">
-                                    Доставка
-                                    <span class="b-checkout__label-info" title="Текст дополнительной информации" data-toggle="tooltip">
-                                        <i class="icon-info-circled-alt"></i>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="col-sm-9 col-md-10">
-                                <ul class="b-checkout__list">
-                                    <li>
-                                        <input type="radio" class="css-radio" name="r1" id="r01" checked />
-                                        <label for="r01" class="css-radio-label">Курьером по Киеву</label>
-                                        <div class="b-checkout__addon">
-                                            -стоимость доставки 40 грн
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <input type="radio" class="css-radio" name="r1" id="r02" />
-                                        <label for="r02" class="css-radio-label">Новая Почта</label>
-                                        <div class="b-checkout__addon">
-                                            -доставка до отделения
-                                            <br />
-                                            -сроки 1-3 рабочих дня
-                                            <br />
-                                            -доставка бесплатна от 1500 грн
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <input type="radio" class="css-radio" name="r1" id="r03" />
-                                        <label for="r03" class="css-radio-label">Самовывоз</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div><!--/row-->
-
-                        <div class="row">
-                            <div class="col-sm-3 col-md-2">
-                                <label class="b-checkout__label">
-                                    Оплата
-                                    <span class="b-checkout__label-info" title="Текст дополнительной информации" data-toggle="tooltip">
-                                        <i class="icon-info-circled-alt"></i>
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="col-sm-9 col-md-10">
-                                <ul class="b-checkout__list">
-                                    <li>
-                                        <input type="radio" class="css-radio" name="r2" id="r04" checked />
-                                        <label for="r04" class="css-radio-label">Наличными</label>
-                                        <div class="b-checkout__addon">
-                                            -оплата при получении заказа
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <input type="radio" class="css-radio" name="r2" id="r05" />
-                                        <label for="r05" class="css-radio-label">Безналичный</label>
-                                        <div class="b-checkout__addon">
-                                            -оплата через  Приват24
-                                            <br />
-                                            -оплата квитанцией  в любом отделении банка
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div><!--/row-->
-
-                        <label class="g-visuallyhidden">Комментарий</label>
-                        <textarea class="g-textarea" placeholder="Комментарий к заказу"></textarea>
-
-                        <p>&nbsp;</p>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>
-                                    <br />
-                                    <input type="checkbox" class="css-checkbox" id="chk01" />
-                                    <label for="chk01" class="css-label">Добавить эко-упаковку 30 грн</label>
-                                </p>
-                                
-                            </div>
-                            <div class="col-sm-6 text-right">
-                                <button type="button" class="g-btn g-btn--large">Завершить оформление</button>
-                            </div>
-                        </div>
+                    <div class="col-md-4">
+                        <label class="g-label">Название поля</label>
+                        <input type="text" class="g-input" />
                     </div>
-                </main>
-                <!--/CHECKOUT MAIN SECTION END-->
-            </div><!--/row-->
-            <!--CHECKOUT ROW END-->
+                </div><!--/row-->
+                
+                <p>&nbsp;</p>
 
+                <div class="b-cabinet__title">
+                    <span class="b-cabinet__title-text">Название подраздела</span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="g-label">Название поля</label>
+                        <input type="text" class="g-input" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="g-label">Название поля</label>
+                        <input type="text" class="g-input" />
+                    </div>
+                </div><!--/row-->
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="g-label">Название поля</label>
+                        <select class="g-select">
+                            <option>Выбор 1</option>
+                            <option>Выбор 2</option>
+                            <option>Выбор 3</option>
+                        </select>
+                    </div>
+                </div><!--/row-->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="g-label">
+                            <input type="checkbox" />
+                            <span class="g-label__body">Чекбокс</span>
+                        </label>
+                    </div>
+                </div>
+
+                <p>&nbsp;</p>
+
+                <button type="button" class="g-btn g-btn">Кнопка</button>
+            </div><!--/b-cabinet-->
+            
         </div><!--/container-->
-    </section>
+    </main>
     <!--/MAIN SECTION END-->
 
     <!--MOBILE MENU START-->
