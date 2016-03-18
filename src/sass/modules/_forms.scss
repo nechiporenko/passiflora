@@ -85,4 +85,82 @@ textarea {
     }
 }
 
+.g-label-addon{
+    display:block;
+    padding:13px 0;
+    margin-bottom:$project-font-size;
+    @include font-size(12px);
+    color:$text-color-light;
+    line-height:1.2;
+
+    a{
+        color:$primary-text-color;
+        text-decoration:underline;
+    }
+}
+
+
+
+/*Custom checkboxes & radio*/
+input[type=checkbox].css-checkbox,
+input[type=radio].css-radio {
+	position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:30px;
+	display:inline-block;
+    @include px2rem(line-height, 19px);
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAFVBMVEUAAADo6Ojo6Ojo6Ojo6Ojo6Ojo6OgGSuaNAAAABnRSTlMA5ztKSeQoqbnFAAAAJElEQVQI12NwTIOARAcGIQYIYBJgSGCAgoRBzERyryHUF6kGALUyEsW3wQgfAAAAAElFTkSuQmCC) left top no-repeat;
+	vertical-align:middle;
+	cursor:pointer;
+    @include transition(all .1s ease-in);
+
+    &:hover{
+        color:$primary;
+        background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAFVBMVEUAAAD/tsH/tsH/tsH/tsH/tsH/tsEHqRguAAAABnRSTlMA5ztKSeQoqbnFAAAAJElEQVQI12NwTIOARAcGIQYIYBJgSGCAgoRBzERyryHUF6kGALUyEsW3wQgfAAAAAElFTkSuQmCC) left top no-repeat;
+    }
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label,
+label.css-label {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAOVBMVEX/tsH/tsH/tsH/tsH/tsH/tsH/////usT/2+D/9Pb/xc7/9/j/4eX/7/L/6u3/1dv/wMr/7O7/ydFNDvXbAAAABXRSTlPm50pJ5NWGl3QAAABiSURBVBjTnc87EoAgDARQRN2EP3r/wxosUEKlW8DwhiGLWc0+RkRIRWjOP8uRtBWAlVUg9HsUj7Yl4OzvMcD3Gp8Z5ADvAUevuXIOzYcuBRJW/TKQdGdyoX7+74yLsYuizV644QfFqmEk5QAAAABJRU5ErkJggg==) left top no-repeat;
+    color:$primary-text-color;
+}
+
+
+label.css-label,
+label.css-radio-label {
+    display:inline-block;
+    margin-bottom:0;
+    -webkit-touch-callout: none;
+    @include user-select(none);
+    font-weight:400;
+}
+
+label.css-label{
+    color:#847c80;
+    @include font-size(14px);
+}
+
+
+label.css-radio-label{
+    color:$text-color;
+    @include font-size(16px);
+}
+
+
+input[type=radio].css-radio + label.css-radio-label {
+	padding-left:40px;
+	display:inline-block;
+    @include px2rem(line-height, 24px);
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAS1BMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMz////19fXw8PD8/Pz5+fnj4+PPz8/S0tLT09OV9ZprAAAAEHRSTlMAaocR+uKzEhB689iyYXwPcViWgQAAAL9JREFUKM91UgkOhCAMLAie6y43/v+lKy1QNXFCQpiBaWkLFYMYtVq3UQxwxSxTdMF462KSF0mk6E2Fj0k0fsnWXGDzQvyeg7kh5L3wv2TpaE8EepPmU5ARrW0FBosSYEq+8az4NIHAB4VxuEiJAj4O/RscxXEj6LIj01FualDVia0wSQWrbwKpXdjKzrfZioOT1oNzuk00mC5/0CHNH3wtCcxvRQRxPMt+1FZ9j2ejXlvbMdAwmMDDcBsfpXl8/r5KHYWXmbRWAAAAAElFTkSuQmCC) left top no-repeat;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=radio].css-radio:checked + label.css-radio-label,
+label.css-radio-label {
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAV1BMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMz/////tsH6+vrj4+PPz8//usT29vb/+frw8PD/5+v/2t/T09P/w8ynMuPhAAAAEHRSTlMAEbNq+muHhnsS4uHz2GEP+1L7TAAAALxJREFUKM91ktsWxBAMRVN0eu8QtIr//85petXpsl9wjiQEOCg460Q/MF5ASlEZ7VDKyWlTJRY3GuUBasNPvQ6TTJhCvetjQPkAw0j612z7Zx+tjX7eYgzV+WiaL1Zt2IVW+gPQGCRdXZCDpoGSAmZ7G3amkBKYW0evEvwqOAYtZYqpESlXC4KKWZVCioAe/w27G8OUSZUrnj1u9oL5lkBxNVE9mwj83Xaee6jc074/A16f4bZK1gnRsfKUf1MfHtz0mIjcAAAAAElFTkSuQmCC) left top no-repeat;
+}
 
