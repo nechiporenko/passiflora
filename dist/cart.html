@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Catalog Parent Page</title>
+    <title>Cart Page</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -106,7 +106,7 @@
                </div>
                <!--HEADER CART START-->
                <div class="h-cart dropdown">
-                   <button type="button" class="h-cart__btn dropdown-toogle" data-toggle="dropdown">
+                   <button type="button" class="h-cart__btn dropdown-toogle" data-toggle="dropdown" disabled>
                        <span class="h-cart__count">2</span>
                    </button>
                    <ul class="h-cart__inner dropdown-menu dropdown-menu-right">
@@ -300,117 +300,276 @@
                     </a>
                 </li>
                 <li class="breadcrumbs__item">
-                    Свадебная флористика
+                    Корзина
                 </li>
             </ol>
             <!--/BREADCRUMBS END-->
 
             <h1 class="g-title g-title--line">
-                <span class="g-title__inner">Свадебная флористика</span>
+                <span class="g-title__inner">Корзина</span>
             </h1>
-            
-            <!--SHORT PRODUCT LIST START-->
-            <ul class="product-list product-list--short">
-                <li class="product-list__item">
-                    <div class="product-list__inner">
-                        <figure class="product-list__thumb">
-                            <a href="catalog.html" class="product-list__link">
-                                <img src="img/del/product01.jpg" class="product-list__img" alt="Product" />
-                            </a>
-                            <figcaption class="product-list__caption" data-match-height>
-                                <a href="catalog.html" class="product-list__title">Оформление зала</a>
-                                <span class="product-list__description">Гибкая ценовая политика. Целостное оформление праздника или расстановка ярких стилевых акцентов</span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="product-list__item">
-                    <div class="product-list__inner">
-                        <figure class="product-list__thumb">
-                            <a href="catalog.html" class="product-list__link">
-                                <img src="img/del/product02.jpg" class="product-list__img" alt="Product" />
-                            </a>
-                            <figcaption class="product-list__caption" data-match-height>
-                                <a href="catalog.html" class="product-list__title">Оформление свадебного кортежа</a>
-                                <span class="product-list__description">Отсутствие стилевых ограничений. Романтика прованса, роскошь</span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="product-list__item">
-                    <div class="product-list__inner">
-                        <figure class="product-list__thumb">
-                            <a href="catalog.html" class="product-list__link">
-                                <img src="img/del/product03.jpg" class="product-list__img" alt="Product" />
-                            </a>
-                            <figcaption class="product-list__caption" data-match-height>
-                                <a href="catalog.html" class="product-list__title">Выездная церемония</a>
-                                <span class="product-list__description">Текстильное оформление мероприятий шифоном</span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="product-list__item">
-                    <div class="product-list__inner">
-                        <figure class="product-list__thumb">
-                            <a href="catalog.html" class="product-list__link">
-                                <img src="img/del/product04.jpg" class="product-list__img" alt="Product" />
-                            </a>
-                            <figcaption class="product-list__caption" data-match-height>
-                                <a href="catalog.html" class="product-list__title">Оформление номера молодоженов</a>
-                                <span class="product-list__description">Концепция, разработанная для оформления Вашего праздника</span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="product-list__item">
-                    <div class="product-list__inner">
-                        <figure class="product-list__thumb">
-                            <a href="catalog.html" class="product-list__link">
-                                <img src="img/del/product02.jpg" class="product-list__img" alt="Product" />
-                            </a>
-                            <figcaption class="product-list__caption" data-match-height>
-                                <a href="catalog.html" class="product-list__title">Свадебный декор</a>
-                                <span class="product-list__description">Предварительное составление эскиза</span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <li class="product-list__item">
-                    <div class="product-list__inner">
-                        <figure class="product-list__thumb">
-                            <a href="catalog.html" class="product-list__link">
-                                <img src="img/del/product03.jpg" class="product-list__img" alt="Product" />
-                            </a>
-                            <figcaption class="product-list__caption" data-match-height>
-                                <a href="catalog.html" class="product-list__title">Пригласительные на свадьбу</a>
-                                <span class="product-list__description">Клиентам, обратившимся повторно, мы предоставляем скидку 10%.</span>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </li>
-            </ul>
-            <!--SHORT PRODUCT LIST END-->
 
-            <!--ADVANTAGES BLOCK START-->
-            <div class="b-advantages">
-                <span class="b-advantages__title">Почему мы?</span>
-                <div class="b-advantages__row">
-                    <div class="b-advantages__col">
-                        <span class="b-advantages__subtitle b-advantages__subtitle--1">Эксклюзивность</span>
-                        <p class="b-advantages__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
+            <!--CART START-->
+            <div class="b-cart">
+                <form class="table-responsive">
+                    <table class="table b-cart__table">
+                        <tr>
+                            <td class="text-center">
+                                <a href="product.html">
+                                    <img src="img/del/product01.jpg" class="b-cart__img" alt="Product" />
+                                </a>
+                            </td>
+                            <td>
+                                <a href="product.html" class="b-cart__title">Влюбленная пора</a>
+                                Роза, тюльпан, амариллис
+                            </td>
+                            <td>
+                                <div class="b-cart__count">
+                                    <input type="text" class="b-cart__input js-stepper" value="1" />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="b-cart__price">1 620 <span class="b-cart__curr">грн</span></span>
+                            </td>
+                            <td class="text-right">
+                                <div class="b-cart__action">
+                                    <button type="submit" class="b-cart__btn"><i class="glyphicon glyphicon-refresh"></i></button>
+                                    <button type="button" class="b-cart__btn"><i class="glyphicon glyphicon-remove"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="product.html">
+                                    <img src="img/del/product02.jpg" class="b-cart__img" alt="Product" />
+                                </a>
+                            </td>
+                            <td>
+                                <a href="product.html" class="b-cart__title">Влюбленная пора</a>
+                                Роза, тюльпан, амариллис
+                            </td>
+                            <td>
+                                <div class="b-cart__count">
+                                    <input type="text" class="b-cart__input js-stepper" value="1" />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="b-cart__price">650 <span class="b-cart__curr">грн</span></span>
+                            </td>
+                            <td class="text-right">
+                                <div class="b-cart__action">
+                                    <button type="submit" class="b-cart__btn"><i class="glyphicon glyphicon-refresh"></i></button>
+                                    <button type="button" class="b-cart__btn"><i class="glyphicon glyphicon-remove"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+                <div class="b-cart__total">
+                    <span class="b-cart__total-text">Итого:</span> <span class="b-cart__price">2 270 <span class="b-cart__curr">грн</span></span>
+                </div>
+
+                <div class="b-cart__checkout">
+                    <div class="b-cart__column">
+                        <a href="catalog-parent.html" class="b-cart__prev-btn">Продолжить покупки</a>
                     </div>
-                    <div class="b-advantages__col">
-                        <span class="b-advantages__subtitle b-advantages__subtitle--2">Качество</span>
-                        <p class="b-advantages__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
-                    </div>
-                    <div class="b-advantages__col">
-                        <span class="b-advantages__subtitle b-advantages__subtitle--3">Свежесть</span>
-                        <p class="b-advantages__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
+                    <div class="b-cart__column">
+                        <a href="checkout.html" class="b-cart__next-btn">Оформить заказ</a>
                     </div>
                 </div>
+
+                <!--CART PRODUCT SLIDER START-->
+                <div class="cart-slider">
+                    <div class="cart-slider__title">
+                        <span class="cart-slider__title-text">Подарки</span>
+                    </div>
+                    <ul class="cart-slider__list js-cartslider">
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product01.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Добавить к заказу</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product02.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Add to order</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product03.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора длинное название</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Додати</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product01.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Добавить к заказу</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product02.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Add to order</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product03.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора длинное название</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Додати</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product01.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Добавить к заказу</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product02.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Add to order</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product03.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора длинное название</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Додати</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product01.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Добавить к заказу</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product02.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Add to order</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product03.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора длинное название</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Додати</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product01.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Добавить к заказу</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product02.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Add to order</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="cart-slider__item">
+                            <figure class="cart-slider__inner">
+                                <a href="product.html" class="cart-slider__thumb">
+                                    <img src="img/del/product03.jpg" class="cart-slider__img" alt="Product" />
+                                </a>
+                                <figcaption class="cart-slider__content">
+                                    <a href="product.html" class="cart-slider__name">Влюбленная пора длинное название</a>
+                                    <span class="cart-slider__price">1 620 <span class="cart-slider__curr">грн</span></span>
+                                    <button type="button" class="cart-slider__btn">Додати</button>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+                <!--/CART PRODUCT SLIDER END-->
             </div>
-            <!--ADVANTAGES BLOCK END-->
+            <!--/CART END-->
 
             <!--SEO SECTION START-->
             <article class="b-seo">

@@ -3,6 +3,8 @@
 // Десктоп меню (выпадайки)
 // Мобильное меню
 // Слайдер на главной
+// Слайдер в карточке товара
+// Слайдер в корзине товара
 // Степперы (кол-во товаров)
 // Стилизация Select (сортировка товаров в каталоге)
 // Слайдер (фильтр) цен в каталоге
@@ -212,7 +214,105 @@ jQuery(document).ready(function ($) {
         $window.bind('resize', method.startResize);//пересчитываем кол-во видимых элементов при ресайзе окна с задержкой .2с
 
     }
-    if ($('.js-productslider').length) { initProductSlider();}
+    if ($('.js-productslider').length) { initProductSlider(); }
+
+    //
+    // Слайдер в корзине товара
+    //---------------------------------------------------------------------------------------
+    function initCartSlider() {
+        var $slider = $('.js-cartslider'),
+            rtime, //переменные для пересчета ресайза окна с задержкой delta
+            timeout = false,
+            delta = 200,
+            method = {};
+
+        method.getSliderSettings = function () {
+            var setting,
+                    settings1 = {
+                        maxSlides: 1,
+                        minSlides: 1,
+                        moveSlides: 1,
+                    },
+                    settings2 = {
+                        maxSlides: 2,
+                        minSlides: 2,
+                        moveSlides: 2,
+                    },
+                    settings3 = {
+                        maxSlides: 3,
+                        minSlides: 3,
+                        moveSlides: 3,
+                    },
+                    settings4 = {
+                        maxSlides: 4,
+                        minSlides: 4,
+                        moveSlides: 4,
+                    },
+                    settings5 = {
+                        maxSlides: 5,
+                        minSlides: 5,
+                        moveSlides: 5,
+                    },
+                    common = {
+                        slideWidth: 170,
+                        slideMargin: 30,
+                        auto: false,
+                        pager: false,
+                        mode: 'horizontal',
+                        infiniteLoop: false,
+                        hideControlOnEnd: true,
+                        useCSS: false,
+                        nextText: '<i class="icon-right-open-big"></i>',
+                        prevText: '<i class="icon-left-open-big"></i>',
+                    },
+                    winW = $window.width();
+            if (winW < 450) {
+                setting = $.extend(settings1, common);
+            }
+            if (winW >= 450 && winW <= 650) {
+                setting = $.extend(settings2, common);
+            }
+            if (winW >= 650 && winW <= 1000) {
+                setting = $.extend(settings3, common);
+            }
+            if (winW >= 1000 && winW <= 1250) {
+                setting = $.extend(settings4, common);
+            }
+            if (winW > 1250) {
+                setting = $.extend(settings5, common);
+            }
+            return setting;
+        }
+
+        method.reloadSliderSettings = function () {
+            $slider.reloadSlider($.extend(method.getSliderSettings(), { startSlide: $slider.getCurrentSlide() }));
+        }
+
+
+        method.endResize = function () {
+            if (new Date() - rtime < delta) {
+                setTimeout(method.endResize, delta);
+            } else {
+                timeout = false;
+                //ресайз окончен - пересчитываем
+                method.reloadSliderSettings();
+            }
+        }
+
+        method.startResize = function () {
+            rtime = new Date();
+            if (timeout === false) {
+                timeout = true;
+                setTimeout(method.endResize, delta);
+            }
+        }
+
+        $slider.bxSlider(method.getSliderSettings());//запускаем слайдер
+
+        $window.bind('resize', method.startResize);//пересчитываем кол-во видимых элементов при ресайзе окна с задержкой .2с
+
+    }
+    if ($('.js-cartslider').length) { initCartSlider(); }
 
     //
     // Степперы (кол-во товаров)
